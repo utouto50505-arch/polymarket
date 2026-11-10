@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>글로벌 예측시장 전광판 (2026-11-10 01:39 KST)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Polymarket · 글로벌 예측시장 전광판 (2026-11-10 23:54 KST)</title>
 <style>
   :root {
     --bg: #0b0e14;
@@ -20,201 +20,214 @@
     --purple: #a855f7;
   }
   * { box-sizing: border-box; }
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif;
-    line-height: 1.5;
+    line-height: 1.48;
+    -webkit-text-size-adjust: 100%;
   }
   a { color: inherit; text-decoration: none; }
   .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(11, 14, 20, 0.92);
-    backdrop-filter: blur(12px);
+    background: #0e131b;
     border-bottom: 1px solid var(--border);
-    padding: 14px 24px;
+    padding: 14px 16px;
   }
   .topbar-inner {
-    max-width: 1440px;
+    max-width: 1360px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
+    gap: 10px;
   }
   .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    min-width: 0;
   }
   .brand-logo {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 9px;
-    background: linear-gradient(135deg, #2f81f7 0%, #16c784 100%);
+    background: linear-gradient(135deg, #2f81f7 0%, #a855f7 55%, #16c784 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 17px;
     color: #fff;
+    flex-shrink: 0;
   }
   .brand-title {
-    font-size: 18px;
+    font-size: 16.5px;
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: #fff;
+    word-break: keep-all;
   }
   .brand-sub {
-    font-size: 12px;
+    font-size: 11.5px;
     color: var(--muted);
   }
-  .portal-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .portal-btn {
-    padding: 7px 12px;
-    border-radius: 8px;
-    font-size: 12.5px;
-    font-weight: 600;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    color: #c9d5e8;
-    transition: all 0.15s;
-  }
-  .portal-btn:hover {
-    border-color: var(--blue);
-    color: #fff;
-    background: #1a2334;
-  }
-  .portal-btn.primary {
-    background: rgba(47, 129, 247, 0.15);
-    border-color: rgba(47, 129, 247, 0.45);
-    color: #79b8ff;
-  }
   .wrap {
-    max-width: 1440px;
+    max-width: 1360px;
     margin: 0 auto;
-    padding: 22px 24px 64px;
+    padding: 14px 14px 56px;
   }
   .controls {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
   }
   .tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .tabs::-webkit-scrollbar { display: none; }
   .tab {
-    padding: 8px 15px;
+    padding: 7px 13px;
     border-radius: 999px;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 700;
     background: var(--panel);
     border: 1px solid var(--border);
     color: var(--muted);
     cursor: pointer;
-    transition: all 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .tab:hover { color: var(--text); }
   .tab.active {
     background: var(--blue);
     border-color: var(--blue);
     color: #fff;
   }
   .search-sort {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    width: 100%;
   }
   .search-input, .sort-select {
     background: var(--panel);
     border: 1px solid var(--border);
     color: var(--text);
-    padding: 9px 14px;
+    padding: 9px 12px;
     border-radius: 10px;
-    font-size: 13.5px;
+    font-size: 13px;
     outline: none;
+    min-width: 0;
+    width: 100%;
   }
-  .search-input { width: 290px; max-width: 100%; }
   .search-input:focus, .sort-select:focus { border-color: var(--blue); }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+    gap: 12px;
+    width: 100%;
   }
   .card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 18px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.15s, transform 0.12s;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
   }
-  .card:hover {
-    border-color: #3b4c6b;
-    background: var(--card-hover);
+  .card.poly-card {
+    border-color: rgba(168, 85, 247, 0.45);
+    background: linear-gradient(180deg, rgba(168, 85, 247, 0.07) 0%, #171d29 42%);
   }
   .card-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .pill-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
   }
   .cat-pill {
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
-    padding: 3px 9px;
+    padding: 2px 8px;
     border-radius: 6px;
+    white-space: nowrap;
   }
   .cat-fed { background: rgba(47, 129, 247, 0.16); color: #79b8ff; border: 1px solid rgba(47, 129, 247, 0.35); }
   .cat-geo { background: rgba(245, 158, 11, 0.16); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35); }
   .cat-kr  { background: rgba(22, 199, 132, 0.16); color: #6ee7b7; border: 1px solid rgba(22, 199, 132, 0.35); }
-  .cat-poly { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); }
+  .cat-poly { background: rgba(168, 85, 247, 0.22); color: #e9d5ff; border: 1px solid rgba(168, 85, 247, 0.5); }
+  .src-pill {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: #10151f;
+    color: #9fb0c9;
+    border: 1px solid #263147;
+  }
+  .src-pill.poly {
+    background: rgba(168, 85, 247, 0.2);
+    color: #f3e8ff;
+    border-color: rgba(168, 85, 247, 0.55);
+  }
   .vol-meta {
-    font-size: 12px;
+    font-size: 11.5px;
     color: var(--muted);
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
   }
-  .vol-meta strong { color: #d0d9e8; }
+  .vol-meta strong { color: #d8e2f0; }
   .card-title-kr {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 800;
     margin: 0 0 3px;
     color: #fff;
+    line-height: 1.35;
+    word-break: keep-all;
   }
   .card-title-en {
-    font-size: 12.5px;
+    font-size: 11.5px;
     color: var(--muted);
-    margin: 0 0 14px;
+    margin: 0 0 11px;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .opt-list {
     display: flex;
     flex-direction: column;
-    gap: 9px;
-    margin-bottom: 12px;
+    gap: 7px;
+    margin-bottom: 10px;
   }
   .opt-row {
     position: relative;
     background: #10151f;
     border: 1px solid #20293a;
     border-radius: 9px;
-    padding: 8px 11px;
+    padding: 8px 10px;
     overflow: hidden;
   }
   .opt-bar {
@@ -222,7 +235,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    opacity: 0.17;
+    opacity: 0.20;
     pointer-events: none;
   }
   .opt-content {
@@ -231,121 +244,102 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    font-size: 13.5px;
+    min-width: 0;
+  }
+  .opt-left {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    min-width: 0;
+    flex: 1;
   }
   .opt-name {
+    font-size: 13.5px;
     font-weight: 700;
-    color: #e6edf6;
+    color: #eef2f8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .opt-vol {
+    font-size: 11px;
+    color: #8a99ad;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .opt-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-variant-numeric: tabular-nums;
     flex-shrink: 0;
   }
   .opt-prob {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 800;
     color: #fff;
+    min-width: 42px;
+    text-align: right;
   }
   .chg {
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
-    padding: 1px 6px;
+    padding: 1px 5px;
     border-radius: 5px;
+    white-space: nowrap;
   }
   .chg.up { background: rgba(22, 199, 132, 0.18); color: #34d399; }
   .chg.dn { background: rgba(234, 57, 67, 0.18); color: #f87171; }
-  .yesno-pill {
-    font-size: 11px;
-    padding: 2px 7px;
-    border-radius: 5px;
-    background: #1a2232;
-    color: #9fb0c9;
-    border: 1px solid #2a364f;
-  }
   .more-btn {
-    background: transparent;
-    border: 1px dashed #2e3b54;
+    background: rgba(47, 129, 247, 0.08);
+    border: 1px dashed #324463;
     color: #8ab4f8;
     border-radius: 8px;
-    padding: 6px 10px;
+    padding: 7px 10px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     width: 100%;
   }
-  .more-btn:hover { background: rgba(47, 129, 247, 0.08); }
   .note-box {
     background: rgba(255, 255, 255, 0.03);
     border-left: 3px solid var(--blue);
-    padding: 8px 11px;
+    padding: 7px 10px;
     border-radius: 0 7px 7px 0;
-    font-size: 12.5px;
+    font-size: 12px;
     color: #b7c4d8;
-    margin-bottom: 14px;
+    word-break: keep-all;
   }
-  .card-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    padding-top: 12px;
-    border-top: 1px solid #222b3d;
+  .poly-card .note-box {
+    border-left-color: var(--purple);
   }
-  .link-group {
-    display: flex;
-    gap: 8px;
-    width: 100%;
+  .sec6-box {
+    display: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    overflow-x: auto;
   }
-  .ext-link {
-    flex: 1;
-    text-align: center;
-    padding: 8px 10px;
-    border-radius: 8px;
+  .sec6-box.show { display: block; }
+  .sec6-date {
     font-size: 12.5px;
     font-weight: 700;
-    border: 1px solid var(--border);
-    background: #121722;
-    color: #cfe0ff;
-    transition: all 0.15s;
+    color: #d8b4fe;
+    margin-bottom: 10px;
   }
-  .ext-link:hover {
-    background: var(--blue);
-    border-color: var(--blue);
-    color: #fff;
-  }
-  .ext-link.poly {
-    background: rgba(168, 85, 247, 0.12);
-    border-color: rgba(168, 85, 247, 0.4);
-    color: #e9d5ff;
-  }
-  .ext-link.poly:hover {
-    background: var(--purple);
-    border-color: var(--purple);
-    color: #fff;
-  }
-  .banner {
-    background: linear-gradient(90deg, rgba(47,129,247,0.12), rgba(168,85,247,0.12));
-    border: 1px solid #2b3954;
-    border-radius: 12px;
-    padding: 13px 18px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: #c8d4e6;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .banner code {
-    background: #0d1118;
-    padding: 3px 8px;
-    border-radius: 5px;
-    color: #79b8ff;
+  .sec6-box h2 { font-size: 18px; margin: 4px 0 12px; color: #fff; }
+  .sec6-box h3 { font-size: 15px; margin: 18px 0 8px; color: #79b8ff; }
+  .sec6-box p { font-size: 13px; color: #cbd5e1; margin: 8px 0; }
+  .sec6-box table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0 14px; min-width: 560px; }
+  .sec6-box th { text-align: left; padding: 8px; border-bottom: 1px solid #3b4c6b; color: #fff; background: #10151f; }
+  .sec6-box td { padding: 8px; border-bottom: 1px solid #222b3d; vertical-align: top; color: #dbe4f0; }
+  .sec6-box .chip { display: inline-block; background: #263044; color: #a5b4fc; border-radius: 8px; padding: 1px 6px; font-size: 10.5px; margin-left: 4px; }
+  @media (max-width: 520px) {
+    .search-sort { grid-template-columns: 1fr; }
+    .wrap { padding: 12px 10px 48px; }
+    .card { padding: 13px; }
   }
 </style>
 </head>
@@ -356,89 +350,347 @@
     <div class="brand">
       <div class="brand-logo">P</div>
       <div>
-        <div class="brand-title">Polymarket · Kalshi 글로벌 예측시장 전광판</div>
-        <div class="brand-sub">기준 시각: 2026-11-10 01:39 KST · 연화님 3대 관찰 축(Fed·거시 / 지정학·유가·관세 / 한국·동아시아)</div>
+        <div class="brand-title">Polymarket · 글로벌 예측시장 전광판</div>
+        <div class="brand-sub">2026-11-10 23:54 KST 기준 · 한국 통신망 차단 없이 폰에서 바로 보는 통합 전광판</div>
       </div>
-    </div>
-    <div class="portal-links">
-      <a class="portal-btn primary" href="https://kalshi.com/markets" target="_blank" rel="noopener">Kalshi 마켓 메인 (한국 바로 접속) ↗</a>
-      <a class="portal-btn" href="https://polymarket.com" target="_blank" rel="noopener">Polymarket 메인 ↗</a>
-      <a class="portal-btn" href="https://polymarket.com/markets?_q=Fed" target="_blank" rel="noopener">Polymarket Fed·금리 ↗</a>
-      <a class="portal-btn" href="https://polymarket.com/markets?_q=Iran+Hormuz" target="_blank" rel="noopener">Polymarket 중동·호르무즈 ↗</a>
-      <a class="portal-btn" href="https://polymarket.com/event/will-north-korea-invade-south-korea-before-2027" target="_blank" rel="noopener">Polymarket 북한 침공 계약 ↗</a>
-      <a class="portal-btn" href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener">CME FedWatch ↗</a>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="banner">
-    <div>
-      💡 <strong>실전 예측시장 전광판:</strong> 실제 자금이 베팅된 글로벌 예측시장 확률·호가(<code>¢</code>)·거래량과 시장 연결 시사점을 한눈에 확인합니다.
-      구간이 많은 시장은 카드 안의 <strong>[▼ 전체 선택지 모두 펼치기]</strong> 버튼을 눌러 모든 가격대를 볼 수 있습니다.
-    </div>
-  </div>
-
   <div class="controls">
     <div class="tabs" id="tabs">
-      <button class="tab active" data-cat="ALL">전체 시장</button>
-      <button class="tab" data-cat="TOP7">🔥 24h 거래량 TOP 7</button>
-      <button class="tab" data-cat="Fed·거시">🏦 Fed · 거시</button>
-      <button class="tab" data-cat="지정학·무역·자산">🌍 지정학 · 유가 · 관세</button>
+      <button class="tab active" data-cat="ALL">전체 (23)</button>
+      <button class="tab" data-cat="POLY">🟣 Polymarket 핵심</button>
+      <button class="tab" data-cat="TOP7">🔥 거래량 TOP 7</button>
+      <button class="tab" data-cat="Fed·거시">🏦 Fed · 금리 · 물가</button>
+      <button class="tab" data-cat="지정학·무역·자산">🌍 중동 · 러우 · 유가</button>
       <button class="tab" data-cat="한국·동아시아">🇰🇷 한국 · 동아시아</button>
+      <button class="tab" data-cat="SEC6">📑 오늘 리포트 6절 전문</button>
     </div>
-    <div class="search-sort">
-      <input type="text" id="search" class="search-input" placeholder="시장·티커·키워드 검색 (예: FOMC, 호르무즈, 유가, 한은)...">
+    <div class="search-sort" id="filter-bar">
+      <input type="text" id="search" class="search-input" placeholder="이슈 검색 (예: 금리, 호르무즈, 이란, 휴전, 유가, 한은, 북한)...">
       <select id="sort" class="sort-select">
-        <option value="default">연화님 3대 축 기본순</option>
-        <option value="vol24">24시간 거래량 높은순</option>
+        <option value="default">핵심 중요도순 (Polymarket + 3대 축)</option>
         <option value="vol">누적 거래량 높은순</option>
+        <option value="vol24">24시간 거래량 높은순</option>
         <option value="chg">일일 변동폭(|%p|) 큰순</option>
       </select>
     </div>
   </div>
 
   <div class="grid" id="grid"></div>
+  <div class="sec6-box" id="sec6"><div class="sec6-date">📅 기준 리포트: 2026-11-10 통합 글로벌 시장·투자 리포트 6절 전문</div><h2>6. Polymarket·지정학·거시 리스크</h2>
+<h3>Polymarket · 글로벌 예측시장 핵심 이슈 TOP 7 (거래량·변화 상위)</h3>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>이슈·시장</th>
+<th>확인된 가격·확률</th>
+<th>거래량·24h 변화</th>
+<th>거시·주식 연결 해석(유가·물가·금리·나스닥·국장)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>러시아·우크라이나 휴전 합의 시점</td>
+<td>2026-11-30까지 5%, 2026-12-31까지 15%</td>
+<td>누적 $10,616,811; 11/30 만기 시장 $208,287. 24h 변화 확인되지 않음</td>
+<td>휴전 진전은 제재·공급 우려를 낮출 수 있지만, 실제 에너지 공급 변화가 확인돼야 유가·물가와 Fed 경로에 반영된다. 유가 안정은 나스닥·국장에 우호적일 수 있다. <span class="chip">Polymarket</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>미·이란 휴전 지속 시장</td>
+<td>2026-11-08 만기 계약은 “No”로 표시</td>
+<td>관련 시장 누적 거래량 $42,032,801; 개별 만기 거래량은 11/8 $1,556,825. 현재 확률·24h 변화 확인되지 않음</td>
+<td>휴전 불안은 호르무즈 통행과 원유 공급 위험 프리미엄을 높일 수 있다. 유가 상승이 물가와 Fed 금리 우려를 자극하면 나스닥과 한국 수입물가에 부담이다. <span class="chip">Polymarket</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fed 금리 인상 전망</td>
+<td>2026년 중 추가 인상 시장 82%</td>
+<td>누적 약 $2M, 당일 약 $104K로 표시; 정확한 기준 시각 확인되지 않음</td>
+<td>높은 인상 확률은 장기금리와 달러를 지지할 수 있어 성장주 할인율과 외국인 한국 주식 수급에 부담이다. <span class="chip">Polymarket</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026년 10월 미국 CPI</td>
+<td>연간 CPI 3.7% 구간 95%; 월간 0.2% 구간 43%</td>
+<td>연간 CPI $91K, 월간 CPI $47.6K 거래량 표시; 24h 변화 확인되지 않음</td>
+<td>10월 CPI 발표는 2026-11-10 08:30 ET로 예정돼 한국시간 장전에는 아직 발표 전이다. 물가 상방이면 금리 인하 기대가 더 약해질 수 있다. <span class="chip">Polymarket + 미국 노동통계국</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td>호르무즈 해협 통행 정상화 시점</td>
+<td>제공된 Kalshi 값: 2026-12-01 전 정상화 5%, 2027-01-01 전 7%</td>
+<td>Kalshi 누적 $15,262,767, 24h $397,331</td>
+<td>정상화 지연은 원유 수송 병목과 유가 하방 경직성으로 이어질 수 있다. 유가→물가→Fed 금리→나스닥·국장 경로를 경계한다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>6</td>
+<td>미국 공식 경기침체(NBER) 2026년</td>
+<td>Kalshi “Starts” 2%</td>
+<td>누적 $4,149,840, 24h $15,059</td>
+<td>이 확률만으로 침체가 없다고 단정할 수 없다. 침체 우려가 실제 고용·소비·실적에 나타나면 기업 이익과 주식 위험선호를 압박한다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>7</td>
+<td>2026-11-10 WTI 가격 구간</td>
+<td>Kalshi: $83.49 초과 90%, $91.49 초과 5%</td>
+<td>누적 $47,118, 24h $43,630</td>
+<td>제공된 예측시장은 당일 유가가 $83.49 위일 가능성을 높게 표시했다. 다만 실제 종가는 장중 확인 전이며 얕은 단기 계약 가격을 거시 전망으로 과대 해석하지 않는다. <span class="chip">숑숑 계산</span></td>
+</tr>
+</tbody>
+</table>
+<p>Polymarket에서 확인된 시장은 검색 당시 화면 스냅샷이다. 위 표는 거래량과 가격이 확인된 시장을 우선 정리했으며, 모든 시장의 동일 기준 24시간 변동률은 확인되지 않았다. <span class="chip">Polymarket</span></p>
+<h3>Fed 금리·거시 예측시장 (Polymarket · Kalshi 교차 검증)</h3>
+<table>
+<thead>
+<tr>
+<th>시장</th>
+<th>선택지·구간</th>
+<th>Polymarket 확률·거래량</th>
+<th>Kalshi 확률·거래량(숑숑 계산)</th>
+<th>해석</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>다음 FOMC: 2026년 12월</td>
+<td>25bp 인상 / 동결 / 25bp 인하</td>
+<td>2026년 중 추가 인상 82%, 누적 약 $2M; 12월 결정과 정확히 같은 계약은 확인되지 않음</td>
+<td>25bp 인상 80%, 동결 19%, 25bp 인하 1%; 누적 $4,915,094, 24h $459,599</td>
+<td>Kalshi는 12월 인상을 우세하게 반영한다. 높은 금리 경로는 장기금리·달러와 기술주 밸류에이션에 부담이다.</td>
+</tr>
+<tr>
+<td>다음 FOMC: 2027년 1월</td>
+<td>동결 / 25bp 인상 / 25bp 인하</td>
+<td>같은 만기의 직접 Polymarket 값 확인되지 않음</td>
+<td>동결 76%, 25bp 인상 21%, 25bp 인하 5%; 누적 $372,266, 24h $1,206</td>
+<td>거래량이 12월 계약보다 작아 변동성에 유의한다.</td>
+</tr>
+<tr>
+<td>FOMC 후 금리 상단: 2026년 12월</td>
+<td>4.00% 초과 등</td>
+<td>직접 대응 Polymarket 계약 확인되지 않음</td>
+<td>4.00% 초과 79%; 누적 $894,420, 24h $4,203</td>
+<td>인상 뒤 금리 상단이 유지될 가능성을 시장이 높게 본다.</td>
+</tr>
+<tr>
+<td>연내 Fed 금리 인하</td>
+<td>2027년 전 인하 여부</td>
+<td>직접 대응 확률 확인되지 않음</td>
+<td>인하 2%; 누적 $1,719,980, 24h $14,149</td>
+<td>인하 기대가 낮으면 성장주 할인율 부담이 계속될 수 있다.</td>
+</tr>
+<tr>
+<td>미국 CPI: 2026년 10월 전월비</td>
+<td>0.1% 초과 / 0.2% 초과 / 0.3% 초과</td>
+<td>월간 0.2% 구간 43%, 거래량 $47.6K로 표시; 0.1% 초과 동일 계약 값은 확인되지 않음</td>
+<td>0.1% 초과 95%, 0.2% 초과 46%, 0.3% 초과 9%; 누적 $1,401,214, 24h $153,242</td>
+<td>발표 시각 전 스냅샷이다. 실제 수치 발표 후 금리시장 반응을 확인해야 한다.</td>
+</tr>
+<tr>
+<td>미국 근원 CPI: 2026년 10월 전월비</td>
+<td>0.1% 초과 / 0.2% 초과 / 0.3% 초과</td>
+<td>근원 연간 2.6% 구간 90%, 누적 거래량 $42K 표시; 월간 계약 직접 수치 확인되지 않음</td>
+<td>0.1% 초과 82%, 0.2% 초과 37%, 0.3% 초과 5%; 누적 $1,013,715, 24h $63,144</td>
+<td>근원 물가가 예상보다 강하면 금리 인하 지연 요인이 된다.</td>
+</tr>
+<tr>
+<td>미국 공식 경기침체(NBER)</td>
+<td>2026년 시작 / 2027년 발생</td>
+<td>같은 계약 확률 확인되지 않음</td>
+<td>2026년 2%, 2027년 19%; 2027년 누적 $975,320, 24h $1,977</td>
+<td>예측시장 수치는 공식 경기판정이 아니다. 고용·소비·기업실적을 함께 확인한다.</td>
+</tr>
+<tr>
+<td>WTI 단기 가격</td>
+<td>2026-11-10 $83.49 초과</td>
+<td>직접 대응 Polymarket 확률 확인되지 않음</td>
+<td>$83.49 초과 90%; 누적 $47,118, 24h $43,630</td>
+<td>유가가 오르면 물가와 장기금리 우려로 위험자산에 부담을 줄 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>Polymarket은 CPI·Fed 관련 카테고리 화면과 특정 시장을 확인했으나, Kalshi와 정확히 같은 만기·구간의 계약이 아닌 경우에는 교차 비교값으로 오인하지 않도록 구분했다. Kalshi 수치는 2026-11-10 08:40 제공값을 그대로 옮겼다. <span class="chip">Polymarket + 숑숑 계산</span></p>
+<h3>한국·동아시아 지정학 리스크 (북한 · 한은 · 미중 관세 · 대만 · 호르무즈)</h3>
+<table>
+<thead>
+<tr>
+<th>시장·사건</th>
+<th>확인된 가격·확률</th>
+<th>거래량·24h 변화</th>
+<th>실제 군사·외교·정책 사실과 해석</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>한국은행 2026년 11월 금통위</td>
+<td>Kalshi: 1~25bp 인상 96%, 동결 3%</td>
+<td>누적 $6,773, 24h $0</td>
+<td>거래량이 작고 24h 거래가 없어 소수 포지션·얕은 유동성으로 봐야 한다. 공식 기준금리는 2026-10-22 기준 3.00% 동결이다. <span class="chip">숑숑 계산 + 한국은행</span></td>
+</tr>
+<tr>
+<td>한국 수출 전년비</td>
+<td>Kalshi: 80% 초과 85%</td>
+<td>누적 $600, 24h $0</td>
+<td>거래가 매우 적어 소수 포지션·얕은 유동성이다. 확률을 실제 수출 전망으로 단정하지 않는다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>김정은 방미 여부</td>
+<td>Kalshi: 임기 중 방문 9.9%</td>
+<td>누적 $18,751, 24h $0</td>
+<td>거래량이 작다. 외교 이벤트의 실현 가능성을 직접 입증하는 자료가 아니다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>시진핑 대만 방문 시점</td>
+<td>Kalshi: 2027년 전 3.8%, 2028년 전 9.6%</td>
+<td>누적 $58,264, 24h $0</td>
+<td>장기 지정학 계약이며 당일 군사 움직임의 대리 지표가 아니다. 대만해협 긴장 고조 시 반도체 공급망 위험 프리미엄이 커질 수 있다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>미국의 대중국 관세율</td>
+<td>Kalshi: 2027-01-01 기준 20% 이상 97%, 30% 이상 78%</td>
+<td>누적 $9,548, 24h $0</td>
+<td>거래량이 매우 낮아 확률 신뢰도가 제한적이다. 관세 인상은 미국 수입물가와 한국 중간재 수출에 영향을 줄 수 있다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>호르무즈 정상화</td>
+<td>Kalshi: 2026-12-01 전 5%, 2027-01-01 전 7%</td>
+<td>누적 $15,262,767, 24h $397,331</td>
+<td>제공 시장은 조기 정상화 확률을 낮게 표시한다. 정상화 지연은 유가·물가 위험을 높일 수 있다. <span class="chip">숑숑 계산</span></td>
+</tr>
+<tr>
+<td>북한의 한국 침공·해상 도발 관련 Polymarket</td>
+<td>현재 가격·확률 확인되지 않음</td>
+<td>거래량·24h 변화 확인되지 않음</td>
+<td>AP는 2026-11-04 북한의 바다 방향 미사일 발사를 보도했다. 이번 검색에서는 11월 9~10일의 추가 도발을 확인하지 못했다. <span class="chip">AP + 확인되지 않음</span></td>
+</tr>
+</tbody>
+</table>
+<h3>북한·한반도 관련 사실과 해석 (확인된 사실 · 해석)</h3>
+<p>AP는 2026-11-04 북한이 바다 방향으로 여러 발의 미사일을 발사했다고 보도했다. 이번 검색에서 2026-11-09 또는 11-10의 추가 발사나 새로운 군사 충돌은 확인되지 않았다. 미사일 발사는 군사 긴장 사실이지만 침공 의도를 확정하는 근거는 아니다. <span class="chip">AP</span></p>
+<h3>중국·미국·한국·중동 관계와 시장 함의</h3>
+<p>2026-11-09 미국 증시는 유가 하락과 함께 상승했고, 한국 증시는 외국인 매도와 장중 상승분 반납이 나타났다. 호르무즈 해협 정상화 지연 가능성은 원유 수송과 물가 위험을 통해 금리에 영향을 줄 수 있고, 미중 관세 변화는 공급망 비용과 한국 수출에 영향을 줄 수 있다. 최근 실제 정책 합의나 새로운 대만해협 군사 움직임은 확인되지 않아 예측시장 수치만으로 사건을 단정하지 않는다. <span class="chip">AP + 중앙신문 + 숑숑 계산 + 확인되지 않음</span></p></div>
 </main>
 
 <script>
-const PM = {"출처": "Kalshi(미국 CFTC 공인 예측시장 실시간 API) — Polymarket 은 GPT/클로드 웹 검색으로 교차 대조", "시각": "2026-11-10 01:39", "시장": [{"분류": "Fed·거시", "시리즈": "KXFEDDECISION", "티커": "KXFEDDECISION-26DEC", "우리말": "다음 FOMC 금리 결정", "제목": "Fed decision in Dec 2026?", "24h거래량$": 154010, "누적거래량$": 4573102, "선택지": [{"이름": "25bp 인상", "확률%": 78.0, "전일대비%p": 1.0, "매수호가¢": 78.0, "매도호가¢": 79.0, "거래량$": 1418650, "24h거래량$": 67883}, {"이름": "동결", "확률%": 22.0, "전일대비%p": -1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 1296072, "24h거래량$": 27764}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 977853, "24h거래량$": 5728}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 634473, "24h거래량$": 52001}], "전체선택지": [{"이름": "25bp 인상", "확률%": 78.0, "전일대비%p": 1.0, "매수호가¢": 78.0, "매도호가¢": 79.0, "거래량$": 1418650, "24h거래량$": 67883}, {"이름": "동결", "확률%": 22.0, "전일대비%p": -1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 1296072, "24h거래량$": 27764}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 977853, "24h거래량$": 5728}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 634473, "24h거래량$": 52001}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 246053, "24h거래량$": 634}], "kalshi_url": "https://kalshi.com/markets/kxfeddecision", "polymarket_url": "https://polymarket.com/markets?_q=Fed+decision", "해석": "Fed 기준금리 결정 직접 지표 → 미 10년물 금리·달러인덱스 → 나스닥 밸류에이션·외국인 국장 수급 직결", "요약": "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Dec 2026?) · 누적 $4,573,102 (24h $154,010): Hike 25bps 78%(+1%p), Fed maintains rate 22%(-1%p), Hike >25bps 1%(-1%p), Cut 25bps 1%(-1%p)"}, {"분류": "Fed·거시", "시리즈": "KXFEDDECISION", "티커": "KXFEDDECISION-27JAN", "우리말": "다음 FOMC 금리 결정", "제목": "Fed decision in Jan 2027?", "24h거래량$": 49, "누적거래량$": 371109, "선택지": [{"이름": "동결", "확률%": 76.0, "전일대비%p": 2.0, "매수호가¢": 77.0, "매도호가¢": 78.0, "거래량$": 85586, "24h거래량$": 49}, {"이름": "25bp 인상", "확률%": 21.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 21.0, "거래량$": 204750, "24h거래량$": 0}, {"이름": "25bp 인하", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 41243, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 20675, "24h거래량$": 0}], "전체선택지": [{"이름": "동결", "확률%": 76.0, "전일대비%p": 2.0, "매수호가¢": 77.0, "매도호가¢": 78.0, "거래량$": 85586, "24h거래량$": 49}, {"이름": "25bp 인상", "확률%": 21.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 21.0, "거래량$": 204750, "24h거래량$": 0}, {"이름": "25bp 인하", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 41243, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 20675, "24h거래량$": 0}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 18855, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfeddecision", "polymarket_url": "https://polymarket.com/markets?_q=Fed+decision", "해석": "Fed 기준금리 결정 직접 지표 → 미 10년물 금리·달러인덱스 → 나스닥 밸류에이션·외국인 국장 수급 직결", "요약": "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Jan 2027?) · 누적 $371,109 (24h $49): Fed maintains rate 76%(+2%p), Hike 25bps 21%, Cut 25bps 3%, Hike >25bps 2%"}, {"분류": "Fed·거시", "시리즈": "KXFED", "티커": "KXFED-26DEC", "우리말": "FOMC 이후 기준금리 상단", "제목": "Fed funds rate after Dec 2026 meeting?", "24h거래량$": 4122, "누적거래량$": 894278, "선택지": [{"이름": "4.00% 상회", "확률%": 80.0, "전일대비%p": 4.0, "매수호가¢": 79.0, "매도호가¢": 80.0, "거래량$": 258209, "24h거래량$": 3815}, {"이름": "5.00% 상회", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1719, "24h거래량$": 0}, {"이름": "4.50% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 305157, "24h거래량$": 0}, {"이름": "4.25% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 136259, "24h거래량$": 226}], "전체선택지": [{"이름": "4.00% 상회", "확률%": 80.0, "전일대비%p": 4.0, "매수호가¢": 79.0, "매도호가¢": 80.0, "거래량$": 258209, "24h거래량$": 3815}, {"이름": "5.00% 상회", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1719, "24h거래량$": 0}, {"이름": "4.50% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 305157, "24h거래량$": 0}, {"이름": "4.25% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 136259, "24h거래량$": 226}, {"이름": "3.75% 상회", "확률%": 98.0, "전일대비%p": 1.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 98144, "24h거래량$": 81}, {"이름": "3.50% 상회", "확률%": 98.0, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 46047, "24h거래량$": 0}, {"이름": "2.75% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 23712, "24h거래량$": 0}, {"이름": "3.25% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 14091, "24h거래량$": 0}, {"이름": "3.00% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 8062, "24h거래량$": 0}, {"이름": "4.75% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1933, "24h거래량$": 0}, {"이름": "5.25% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 945, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfed", "polymarket_url": "https://polymarket.com/markets?_q=Fed+funds+rate", "해석": "연말·연초 기준금리 상단 레벨 → 성장주·기술주 할인율과 레버리지 ETF(TQQQ·SOXL) 보유 비용 결정", "요약": "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Dec 2026 meeting?) · 누적 $894,278 (24h $4,122): Above 4.00% 80%(+4%p), Above 5.00% 2%, Above 4.50% 1%, Above 4.25% 1%"}, {"분류": "Fed·거시", "시리즈": "KXFED", "티커": "KXFED-27JAN", "우리말": "FOMC 이후 기준금리 상단", "제목": "Fed funds rate after Jan 2027 meeting?", "24h거래량$": 0, "누적거래량$": 60570, "선택지": [{"이름": "3.25% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 13355, "24h거래량$": 0}, {"이름": "4.00% 상회", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 90.0, "매도호가¢": 100.0, "거래량$": 6334, "24h거래량$": 0}, {"이름": "3.00% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 99.0, "거래량$": 5580, "24h거래량$": 0}, {"이름": "4.25% 상회", "확률%": 15.0, "전일대비%p": 0.0, "매수호가¢": 9.0, "매도호가¢": 15.0, "거래량$": 2895, "24h거래량$": 0}], "전체선택지": [{"이름": "3.25% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 13355, "24h거래량$": 0}, {"이름": "4.00% 상회", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 90.0, "매도호가¢": 100.0, "거래량$": 6334, "24h거래량$": 0}, {"이름": "3.00% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 99.0, "거래량$": 5580, "24h거래량$": 0}, {"이름": "4.25% 상회", "확률%": 15.0, "전일대비%p": 0.0, "매수호가¢": 9.0, "매도호가¢": 15.0, "거래량$": 2895, "24h거래량$": 0}, {"이름": "1.25% 상회", "확률%": 93.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2632, "24h거래량$": 0}, {"이름": "3.75% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 91.0, "매도호가¢": 98.0, "거래량$": 2574, "24h거래량$": 0}, {"이름": "2.50% 상회", "확률%": 93.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 2454, "24h거래량$": 0}, {"이름": "1.50% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 100.0, "거래량$": 2417, "24h거래량$": 0}, {"이름": "0.75% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 100.0, "거래량$": 2148, "24h거래량$": 0}, {"이름": "2.00% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 100.0, "거래량$": 1984, "24h거래량$": 0}, {"이름": "2.25% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 96.0, "매도호가¢": 99.0, "거래량$": 1712, "24h거래량$": 0}, {"이름": "2.75% 상회", "확률%": 96.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 1104, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfed", "polymarket_url": "https://polymarket.com/markets?_q=Fed+funds+rate", "해석": "연말·연초 기준금리 상단 레벨 → 성장주·기술주 할인율과 레버리지 ETF(TQQQ·SOXL) 보유 비용 결정", "요약": "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Jan 2027 meeting?) · 누적 $60,570 (24h $0): Above 3.25% 94%, Above 4.00% 90%, Above 3.00% 95%, Above 4.25% 15%"}, {"분류": "Fed·거시", "시리즈": "KXRATECUT", "티커": "KXRATECUT-26DEC31", "우리말": "연내 Fed 금리 인하 여부", "제목": "Fed rate cut before 2027?", "24h거래량$": 5723, "누적거래량$": 1711180, "선택지": [{"이름": "연내 인하", "확률%": 1.9, "전일대비%p": 0.0, "매수호가¢": 1.5, "매도호가¢": 1.8, "거래량$": 1711180, "24h거래량$": 5723}], "전체선택지": [{"이름": "연내 인하", "확률%": 1.9, "전일대비%p": 0.0, "매수호가¢": 1.5, "매도호가¢": 1.8, "거래량$": 1711180, "24h거래량$": 5723}], "kalshi_url": "https://kalshi.com/markets/kxratecut", "polymarket_url": "https://polymarket.com/markets?_q=Fed+rate+cut", "해석": "금리 인하 기대 소멸 시 고밸류 기술주 멀티플 압박 · 배당·방어주 및 달러 강세 환경 지속", "요약": "[Fed·거시] 연내 Fed 금리 인하 여부 (Fed rate cut before 2027?) · 누적 $1,711,180 (24h $5,723): Cuts 2%"}, {"분류": "Fed·거시", "시리즈": "KXCPI", "티커": "KXCPI-26OCT", "우리말": "미국 소비자물가(CPI) 전월비", "제목": "CPI in October", "24h거래량$": 113629, "누적거래량$": 1331912, "선택지": [{"이름": "0.1% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 92.0, "매도호가¢": 95.0, "거래량$": 385985, "24h거래량$": 18913}, {"이름": "0.2% 상회", "확률%": 54.0, "전일대비%p": -8.0, "매수호가¢": 54.0, "매도호가¢": 58.0, "거래량$": 311908, "24h거래량$": 12944}, {"이름": "0.3% 상회", "확률%": 13.0, "전일대비%p": -2.0, "매수호가¢": 12.0, "매도호가¢": 13.0, "거래량$": 252609, "24h거래량$": 37183}, {"이름": "0.4% 상회", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 124272, "24h거래량$": 22444}], "전체선택지": [{"이름": "0.1% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 92.0, "매도호가¢": 95.0, "거래량$": 385985, "24h거래량$": 18913}, {"이름": "0.2% 상회", "확률%": 54.0, "전일대비%p": -8.0, "매수호가¢": 54.0, "매도호가¢": 58.0, "거래량$": 311908, "24h거래량$": 12944}, {"이름": "0.3% 상회", "확률%": 13.0, "전일대비%p": -2.0, "매수호가¢": 12.0, "매도호가¢": 13.0, "거래량$": 252609, "24h거래량$": 37183}, {"이름": "0.4% 상회", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 124272, "24h거래량$": 22444}, {"이름": "0.0% 상회", "확률%": 98.0, "전일대비%p": -1.0, "매수호가¢": 98.0, "매도호가¢": 99.0, "거래량$": 88618, "24h거래량$": 5937}, {"이름": "-0.1% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 52219, "24h거래량$": 15804}, {"이름": "0.5% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 41725, "24h거래량$": 0}, {"이름": "0.8% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 18318, "24h거래량$": 0}, {"이름": "0.6% 상회", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 18140, "24h거래량$": 403}, {"이름": "1.0% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 18085, "24h거래량$": 0}, {"이름": "0.9% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 12224, "24h거래량$": 0}, {"이름": "0.7% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 7808, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxcpi", "polymarket_url": "https://polymarket.com/markets?_q=CPI+inflation", "해석": "유가·관세가 헤드라인 물가로 전이되는 속도 → 전월비 0.3% 이상 확률 상승 시 금리 인상·동결 장기화", "요약": "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in October) · 누적 $1,331,912 (24h $113,629): Above 0.1% 94%, Above 0.2% 54%(-8%p), Above 0.3% 13%(-2%p), Above 0.4% 1%(-2%p)"}, {"분류": "Fed·거시", "시리즈": "KXCPI", "티커": "KXCPI-26NOV", "우리말": "미국 소비자물가(CPI) 전월비", "제목": "CPI in November", "24h거래량$": 10803, "누적거래량$": 171472, "선택지": [{"이름": "0.1% 상회", "확률%": 26.0, "전일대비%p": -11.0, "매수호가¢": 25.0, "매도호가¢": 32.0, "거래량$": 38925, "24h거래량$": 2459}, {"이름": "-0.1% 상회", "확률%": 70.0, "전일대비%p": -3.0, "매수호가¢": 66.0, "매도호가¢": 69.0, "거래량$": 28314, "24h거래량$": 1064}, {"이름": "0.0% 상회", "확률%": 63.0, "전일대비%p": -1.0, "매수호가¢": 30.0, "매도호가¢": 40.0, "거래량$": 24100, "24h거래량$": 881}, {"이름": "0.4% 상회", "확률%": 4.0, "전일대비%p": -3.0, "매수호가¢": 4.0, "매도호가¢": 5.0, "거래량$": 23097, "24h거래량$": 237}], "전체선택지": [{"이름": "0.1% 상회", "확률%": 26.0, "전일대비%p": -11.0, "매수호가¢": 25.0, "매도호가¢": 32.0, "거래량$": 38925, "24h거래량$": 2459}, {"이름": "-0.1% 상회", "확률%": 70.0, "전일대비%p": -3.0, "매수호가¢": 66.0, "매도호가¢": 69.0, "거래량$": 28314, "24h거래량$": 1064}, {"이름": "0.0% 상회", "확률%": 63.0, "전일대비%p": -1.0, "매수호가¢": 30.0, "매도호가¢": 40.0, "거래량$": 24100, "24h거래량$": 881}, {"이름": "0.4% 상회", "확률%": 4.0, "전일대비%p": -3.0, "매수호가¢": 4.0, "매도호가¢": 5.0, "거래량$": 23097, "24h거래량$": 237}, {"이름": "0.2% 상회", "확률%": 14.0, "전일대비%p": 4.0, "매수호가¢": 9.0, "매도호가¢": 14.0, "거래량$": 20918, "24h거래량$": 1884}, {"이름": "0.3% 상회", "확률%": 4.0, "전일대비%p": -4.0, "매수호가¢": 5.0, "매도호가¢": 7.0, "거래량$": 18213, "24h거래량$": 4118}, {"이름": "0.5% 상회", "확률%": 3.0, "전일대비%p": -1.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 17125, "24h거래량$": 20}, {"이름": "-0.2% 상회", "확률%": 89.0, "전일대비%p": -4.0, "매수호가¢": 90.0, "매도호가¢": 91.0, "거래량$": 583, "24h거래량$": 78}, {"이름": "-0.3% 상회", "확률%": 92.0, "전일대비%p": -3.0, "매수호가¢": 92.0, "매도호가¢": 93.0, "거래량$": 196, "24h거래량$": 62}], "kalshi_url": "https://kalshi.com/markets/kxcpi", "polymarket_url": "https://polymarket.com/markets?_q=CPI+inflation", "해석": "유가·관세가 헤드라인 물가로 전이되는 속도 → 전월비 0.3% 이상 확률 상승 시 금리 인상·동결 장기화", "요약": "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in November) · 누적 $171,472 (24h $10,803): Above 0.1% 26%(-11%p), Above -0.1% 70%(-3%p), Above 0.0% 63%(-1%p), Above 0.4% 4%(-3%p)"}, {"분류": "Fed·거시", "시리즈": "KXCPICORE", "티커": "KXCPICORE-26OCT", "우리말": "미국 근원 CPI 전월비", "제목": "Core CPI in October", "24h거래량$": 47720, "누적거래량$": 992976, "선택지": [{"이름": "0.1% 상회", "확률%": 80.0, "전일대비%p": -7.0, "매수호가¢": 79.0, "매도호가¢": 81.0, "거래량$": 275120, "24h거래량$": 6646}, {"이름": "0.2% 상회", "확률%": 33.0, "전일대비%p": -8.0, "매수호가¢": 33.0, "매도호가¢": 34.0, "거래량$": 170106, "24h거래량$": 8895}, {"이름": "0.3% 상회", "확률%": 5.0, "전일대비%p": -1.0, "매수호가¢": 5.0, "매도호가¢": 7.0, "거래량$": 150485, "24h거래량$": 31662}, {"이름": "0.0% 상회", "확률%": 98.0, "전일대비%p": -1.0, "매수호가¢": 98.0, "매도호가¢": 99.0, "거래량$": 103386, "24h거래량$": 367}], "전체선택지": [{"이름": "0.1% 상회", "확률%": 80.0, "전일대비%p": -7.0, "매수호가¢": 79.0, "매도호가¢": 81.0, "거래량$": 275120, "24h거래량$": 6646}, {"이름": "0.2% 상회", "확률%": 33.0, "전일대비%p": -8.0, "매수호가¢": 33.0, "매도호가¢": 34.0, "거래량$": 170106, "24h거래량$": 8895}, {"이름": "0.3% 상회", "확률%": 5.0, "전일대비%p": -1.0, "매수호가¢": 5.0, "매도호가¢": 7.0, "거래량$": 150485, "24h거래량$": 31662}, {"이름": "0.0% 상회", "확률%": 98.0, "전일대비%p": -1.0, "매수호가¢": 98.0, "매도호가¢": 99.0, "거래량$": 103386, "24h거래량$": 367}, {"이름": "0.4% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 92266, "24h거래량$": 0}, {"이름": "0.5% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 76528, "24h거래량$": 150}, {"이름": "0.6% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 63023, "24h거래량$": 0}, {"이름": "0.7% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 41553, "24h거래량$": 0}, {"이름": "1.0% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 11194, "24h거래량$": 0}, {"이름": "0.8% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 5288, "24h거래량$": 0}, {"이름": "0.9% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 4028, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxcpicore", "polymarket_url": "https://polymarket.com/markets?_q=Core+CPI", "해석": "에너지·식품을 뺀 기조적 물가 압력 → Fed 가 가장 중시하는 통화정책 방향타", "요약": "[Fed·거시] 미국 근원 CPI 전월비 (Core CPI in October) · 누적 $992,976 (24h $47,720): Above 0.1% 80%(-7%p), Above 0.2% 33%(-8%p), Above 0.3% 5%(-1%p), Above 0.0% 98%(-1%p)"}, {"분류": "Fed·거시", "시리즈": "KXRECSSNBER", "티커": "KXRECSSNBER-26", "우리말": "미국 공식 경기침체(NBER)", "제목": "Recession this year?", "24h거래량$": 16069, "누적거래량$": 4149687, "선택지": [{"이름": "침체 진입", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 1.0, "매도호가¢": 3.0, "거래량$": 4149687, "24h거래량$": 16069}], "전체선택지": [{"이름": "침체 진입", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 1.0, "매도호가¢": 3.0, "거래량$": 4149687, "24h거래량$": 16069}], "kalshi_url": "https://kalshi.com/markets/kxrecssnber", "polymarket_url": "https://polymarket.com/markets?_q=US+recession", "해석": "침체 확률 급등 시 기업 이익(EPS) 하향 위험 · 낮을 때는 금리만 안정되면 실적 장세 유지", "요약": "[Fed·거시] 미국 공식 경기침체(NBER) (Recession this year?) · 누적 $4,149,687 (24h $16,069): Starts 3%(+1%p)"}, {"분류": "Fed·거시", "시리즈": "KXRECSSNBER", "티커": "KXRECSSNBER-27", "우리말": "미국 공식 경기침체(NBER)", "제목": "Recession in 2027?", "24h거래량$": 3578, "누적거래량$": 974232, "선택지": [{"이름": "예(발생)", "확률%": 22.0, "전일대비%p": 1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 974232, "24h거래량$": 3578}], "전체선택지": [{"이름": "예(발생)", "확률%": 22.0, "전일대비%p": 1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 974232, "24h거래량$": 3578}], "kalshi_url": "https://kalshi.com/markets/kxrecssnber", "polymarket_url": "https://polymarket.com/markets?_q=US+recession", "해석": "침체 확률 급등 시 기업 이익(EPS) 하향 위험 · 낮을 때는 금리만 안정되면 실적 장세 유지", "요약": "[Fed·거시] 미국 공식 경기침체(NBER) (Recession in 2027?) · 누적 $974,232 (24h $3,578): Yes 22%(+1%p)"}, {"분류": "지정학·무역·자산", "시리즈": "KXHORMUZNORM", "티커": "KXHORMUZNORM-26MAR17", "우리말": "호르무즈 해협 통행 정상화 시점", "제목": "When will traffic at the Strait of Hormuz return to normal?", "24h거래량$": 126305, "누적거래량$": 14968687, "선택지": [{"이름": "2027년 1월 전", "확률%": 6.4, "전일대비%p": -0.3, "매수호가¢": 6.1, "매도호가¢": 6.4, "거래량$": 3850509, "24h거래량$": 61550}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 1974576, "24h거래량$": 55934}, {"이름": "2027년 7월 전", "확률%": 38.0, "전일대비%p": 0.0, "매수호가¢": 38.0, "매도호가¢": 39.0, "거래량$": 1664508, "24h거래량$": 968}, {"이름": "2027년 4월 전", "확률%": 18.0, "전일대비%p": 0.0, "매수호가¢": 18.0, "매도호가¢": 26.0, "거래량$": 879430, "24h거래량$": 645}], "전체선택지": [{"이름": "2027년 1월 전", "확률%": 6.4, "전일대비%p": -0.3, "매수호가¢": 6.1, "매도호가¢": 6.4, "거래량$": 3850509, "24h거래량$": 61550}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 1974576, "24h거래량$": 55934}, {"이름": "2027년 7월 전", "확률%": 38.0, "전일대비%p": 0.0, "매수호가¢": 38.0, "매도호가¢": 39.0, "거래량$": 1664508, "24h거래량$": 968}, {"이름": "2027년 4월 전", "확률%": 18.0, "전일대비%p": 0.0, "매수호가¢": 18.0, "매도호가¢": 26.0, "거래량$": 879430, "24h거래량$": 645}, {"이름": "2028년 1월 전", "확률%": 53.0, "전일대비%p": 0.0, "매수호가¢": 53.0, "매도호가¢": 54.0, "거래량$": 90607, "24h거래량$": 162}, {"이름": "2027년 11월 전", "확률%": 48.0, "전일대비%p": 0.0, "매수호가¢": 47.0, "매도호가¢": 48.0, "거래량$": 79385, "24h거래량$": 306}, {"이름": "2029년 1월 전", "확률%": 69.0, "전일대비%p": 0.0, "매수호가¢": 69.0, "매도호가¢": 70.0, "거래량$": 65388, "24h거래량$": 1989}, {"이름": "2028년 7월 전", "확률%": 61.0, "전일대비%p": 0.0, "매수호가¢": 61.0, "매도호가¢": 62.0, "거래량$": 53170, "24h거래량$": 61}, {"이름": "2027년 12월 전", "확률%": 48.0, "전일대비%p": -1.0, "매수호가¢": 48.0, "매도호가¢": 49.0, "거래량$": 20660, "24h거래량$": 480}, {"이름": "2027년 2월 전", "확률%": 9.0, "전일대비%p": -1.0, "매수호가¢": 9.0, "매도호가¢": 12.0, "거래량$": 15137, "24h거래량$": 1296}, {"이름": "2027년 5월 전", "확률%": 21.0, "전일대비%p": -3.0, "매수호가¢": 20.0, "매도호가¢": 26.0, "거래량$": 7499, "24h거래량$": 1322}, {"이름": "2027년 6월 전", "확률%": 32.0, "전일대비%p": -1.0, "매수호가¢": 32.0, "매도호가¢": 33.0, "거래량$": 5687, "24h거래량$": 137}], "kalshi_url": "https://kalshi.com/markets/kxhormuznorm", "polymarket_url": "https://polymarket.com/markets?_q=Strait+of+Hormuz", "해석": "글로벌 원유 수송 핵심 병목 → 정상화 지연(낮은 확률)은 유가 하방 경직성·인플레이션 장기화 요인", "요약": "[지정학·무역·자산] 호르무즈 해협 통행 정상화 시점 (When will traffic at the Strait of Hormuz return to normal?) · 누적 $14,968,687 (24h $126,305): Before Jan 1, 2027 6%(-0%p), Before Dec 1, 2026 3%(+1%p), Before Jul 1, 2027 38%, Before Apr 1, 2027 18%"}, {"분류": "지정학·무역·자산", "시리즈": "KXUSAIRANAGREEMENT", "티커": "KXUSAIRANAGREEMENT-27", "우리말": "미·이란 핵 합의 여부", "제목": "US-Iran nuclear deal?", "24h거래량$": 69165, "누적거래량$": 6022402, "선택지": [{"이름": "2027년 1월 전", "확률%": 6.9, "전일대비%p": 0.9, "매수호가¢": 6.9, "매도호가¢": 7.0, "거래량$": 2019990, "24h거래량$": 13295}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 677395, "24h거래량$": 50292}, {"이름": "2029년 1월 전", "확률%": 50.0, "전일대비%p": 3.0, "매수호가¢": 49.0, "매도호가¢": 54.0, "거래량$": 147868, "24h거래량$": 229}, {"이름": "2028년 1월 전", "확률%": 41.0, "전일대비%p": 6.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 142321, "24h거래량$": 1784}], "전체선택지": [{"이름": "2027년 1월 전", "확률%": 6.9, "전일대비%p": 0.9, "매수호가¢": 6.9, "매도호가¢": 7.0, "거래량$": 2019990, "24h거래량$": 13295}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 1.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 677395, "24h거래량$": 50292}, {"이름": "2029년 1월 전", "확률%": 50.0, "전일대비%p": 3.0, "매수호가¢": 49.0, "매도호가¢": 54.0, "거래량$": 147868, "24h거래량$": 229}, {"이름": "2028년 1월 전", "확률%": 41.0, "전일대비%p": 6.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 142321, "24h거래량$": 1784}, {"이름": "2027년 3월 전", "확률%": 15.0, "전일대비%p": -2.0, "매수호가¢": 15.0, "매도호가¢": 16.0, "거래량$": 106155, "24h거래량$": 698}, {"이름": "2027년 2월 전", "확률%": 11.0, "전일대비%p": 1.0, "매수호가¢": 11.0, "매도호가¢": 12.0, "거래량$": 47568, "24h거래량$": 2852}, {"이름": "2027년 7월 전", "확률%": 52.0, "전일대비%p": null, "매수호가¢": 17.0, "매도호가¢": 45.0, "거래량$": 13, "24h거래량$": 13}, {"이름": "2027년 10월 전", "확률%": 25.0, "전일대비%p": null, "매수호가¢": 21.0, "매도호가¢": 45.0, "거래량$": 3, "24h거래량$": 3}, {"이름": "2026년 11월 전", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 100.0, "거래량$": 1738516, "24h거래량$": 0}, {"이름": "2026년 10월 전", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 100.0, "거래량$": 1142574, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxusairanagreement", "polymarket_url": "https://polymarket.com/markets?_q=Iran+nuclear+deal", "해석": "합의 확률 상승 시 중동 전쟁 프리미엄 축소·유가 안정 → 글로벌 위험자산(나스닥·국장) 안도 랠리 재료", "요약": "[지정학·무역·자산] 미·이란 핵 합의 여부 (US-Iran nuclear deal?) · 누적 $6,022,402 (24h $69,165): Before Jan 1, 2027 7%(+1%p), Before Dec 1, 2026 3%(+1%p), Before Jan 20, 2029 50%(+3%p), Before Jan 1, 2028 41%(+6%p)"}, {"분류": "지정학·무역·자산", "시리즈": "KXWTI", "티커": "KXWTI-26NOV0914", "우리말": "WTI 유가 단기 가격 구간", "제목": "Oil Price (WTI) on Nov 9, 2026?", "24h거래량$": 163475, "누적거래량$": 218926, "선택지": [{"이름": "$89.99 상회", "확률%": 3.0, "전일대비%p": -59.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 24419, "24h거래량$": 19570}, {"이름": "$87.49 상회", "확률%": 53.0, "전일대비%p": -32.0, "매수호가¢": 54.0, "매도호가¢": 56.0, "거래량$": 15846, "24h거래량$": 14165}, {"이름": "$87.99 상회", "확률%": 38.0, "전일대비%p": -48.0, "매수호가¢": 35.0, "매도호가¢": 37.0, "거래량$": 13951, "24h거래량$": 13202}, {"이름": "$89.49 상회", "확률%": 5.0, "전일대비%p": -63.0, "매수호가¢": 5.0, "매도호가¢": 6.0, "거래량$": 12202, "24h거래량$": 9477}], "전체선택지": [{"이름": "$89.99 상회", "확률%": 3.0, "전일대비%p": -59.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 24419, "24h거래량$": 19570}, {"이름": "$87.49 상회", "확률%": 53.0, "전일대비%p": -32.0, "매수호가¢": 54.0, "매도호가¢": 56.0, "거래량$": 15846, "24h거래량$": 14165}, {"이름": "$87.99 상회", "확률%": 38.0, "전일대비%p": -48.0, "매수호가¢": 35.0, "매도호가¢": 37.0, "거래량$": 13951, "24h거래량$": 13202}, {"이름": "$89.49 상회", "확률%": 5.0, "전일대비%p": -63.0, "매수호가¢": 5.0, "매도호가¢": 6.0, "거래량$": 12202, "24h거래량$": 9477}, {"이름": "$88.49 상회", "확률%": 20.0, "전일대비%p": -61.0, "매수호가¢": 20.0, "매도호가¢": 21.0, "거래량$": 11980, "24h거래량$": 11055}, {"이름": "$86.49 상회", "확률%": 78.0, "전일대비%p": -15.0, "매수호가¢": 85.0, "매도호가¢": 86.0, "거래량$": 11299, "24h거래량$": 10946}, {"이름": "$88.99 상회", "확률%": 8.0, "전일대비%p": -67.0, "매수호가¢": 9.0, "매도호가¢": 11.0, "거래량$": 10201, "24h거래량$": 9528}, {"이름": "$86.99 상회", "확률%": 75.0, "전일대비%p": -18.0, "매수호가¢": 72.0, "매도호가¢": 73.0, "거래량$": 9748, "24h거래량$": 8706}, {"이름": "$92.99 상회", "확률%": 2.0, "전일대비%p": -20.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 8202, "24h거래량$": 4685}, {"이름": "$85.99 상회", "확률%": 88.0, "전일대비%p": -9.0, "매수호가¢": 92.0, "매도호가¢": 93.0, "거래량$": 7074, "24h거래량$": 5825}, {"이름": "$97.49 상회", "확률%": 3.0, "전일대비%p": 2.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 4253, "24h거래량$": 903}, {"이름": "$84.99 상회", "확률%": 97.0, "전일대비%p": 4.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 3789, "24h거래량$": 3490}], "kalshi_url": "https://kalshi.com/markets/kxwti", "polymarket_url": "https://polymarket.com/markets?_q=crude+oil+price", "해석": "지정학 리스크의 실시간 가격표 → 유가 급등 시 물가(CPI) 자극 → Fed 긴축 우려 → 증시 조정 사슬의 출발점", "요약": "[지정학·무역·자산] WTI 유가 단기 가격 구간 (Oil Price (WTI) on Nov 9, 2026?) · 누적 $218,926 (24h $163,475): Above $89.99 3%(-59%p), Above $87.49 53%(-32%p), Above $87.99 38%(-48%p), Above $89.49 5%(-63%p)"}, {"분류": "지정학·무역·자산", "시리즈": "KXTARIFFRATEPRC", "티커": "KXTARIFFRATEPRC-27JAN01", "우리말": "미국의 대중국 관세율", "제목": "What will the tariff rate on Chinese imports be on Jan 1, 2027?", "24h거래량$": 0, "누적거래량$": 9548, "선택지": [{"이름": "20% 이상", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 11.0, "매도호가¢": 98.0, "거래량$": 3813, "24h거래량$": 0}, {"이름": "50% 이상", "확률%": 22.0, "전일대비%p": 0.0, "매수호가¢": 23.0, "매도호가¢": 67.0, "거래량$": 2257, "24h거래량$": 0}, {"이름": "30% 이상", "확률%": 78.0, "전일대비%p": 0.0, "매수호가¢": 7.0, "매도호가¢": 97.0, "거래량$": 1657, "24h거래량$": 0}, {"이름": "15% 이상", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 11.0, "매도호가¢": 98.0, "거래량$": 1435, "24h거래량$": 0}], "전체선택지": [{"이름": "20% 이상", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 11.0, "매도호가¢": 98.0, "거래량$": 3813, "24h거래량$": 0}, {"이름": "50% 이상", "확률%": 22.0, "전일대비%p": 0.0, "매수호가¢": 23.0, "매도호가¢": 67.0, "거래량$": 2257, "24h거래량$": 0}, {"이름": "30% 이상", "확률%": 78.0, "전일대비%p": 0.0, "매수호가¢": 7.0, "매도호가¢": 97.0, "거래량$": 1657, "24h거래량$": 0}, {"이름": "15% 이상", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 11.0, "매도호가¢": 98.0, "거래량$": 1435, "24h거래량$": 0}, {"이름": "10% 이상", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 88.0, "매도호가¢": 99.0, "거래량$": 384, "24h거래량$": 0}, {"이름": "100% 이상", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 2.0, "매도호가¢": 17.0, "거래량$": 2, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxtariffrateprc", "polymarket_url": "https://polymarket.com/markets?_q=China+tariff", "해석": "미·중 관세율 상단 → 글로벌 공급망 비용·미국 수입물가 및 한국 중간재(반도체·화학) 수출 직결", "요약": "[지정학·무역·자산] 미국의 대중국 관세율 (What will the tariff rate on Chinese imports be on Jan 1, 2027?) · 누적 $9,548 (24h $0): 20% or above 97%, 50% or above 22%, 30% or above 78%, 15% or above 90%"}, {"분류": "한국·동아시아", "시리즈": "KXCBDECISIONKOREA", "티커": "KXCBDECISIONKOREA-26NOV25", "우리말": "한국은행 금통위 기준금리 결정", "제목": "Bank of Korea rate decision in November", "24h거래량$": 0, "누적거래량$": 6773, "선택지": [{"이름": "25bp 인상", "확률%": 96.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2430, "24h거래량$": 0}, {"이름": "동결", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 3.0, "거래량$": 421, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 2752, "24h거래량$": 0}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 968, "24h거래량$": 0}], "전체선택지": [{"이름": "25bp 인상", "확률%": 96.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2430, "24h거래량$": 0}, {"이름": "동결", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 3.0, "거래량$": 421, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 2752, "24h거래량$": 0}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 968, "24h거래량$": 0}, {"이름": "Cut 1-25bps", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 202, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxcbdecisionkorea", "polymarket_url": "https://polymarket.com/markets?_q=Bank+of+Korea", "해석": "원/달러 환율 방어·수도권 가계부채 억제 목적의 한은 금리 경로 → 국내 증시 유동성·내수/금융주 영향", "요약": "[한국·동아시아] 한국은행 금통위 기준금리 결정 (Bank of Korea rate decision in November) · 누적 $6,773 (24h $0): Hike 1-25bps 96%, Maintain current rate 3%, Hike more than 25bps 1%, Cut more than 25bps 1%"}, {"분류": "한국·동아시아", "시리즈": "KXSKEXPYOY", "티커": "KXSKEXPYOY-26NOV30", "우리말": "한국 수출 전년동월비", "제목": "South Korea exports YoY for November", "24h거래량$": 0, "누적거래량$": 600, "선택지": [{"이름": "80.0% 상회", "확률%": 85.0, "전일대비%p": 0.0, "매수호가¢": 77.0, "매도호가¢": 86.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "85.0% 상회", "확률%": 71.0, "전일대비%p": 0.0, "매수호가¢": 65.0, "매도호가¢": 74.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "110.0% 상회", "확률%": 11.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 12.0, "거래량$": 90, "24h거래량$": 0}, {"이름": "75.0% 상회", "확률%": 90.5, "전일대비%p": null, "매수호가¢": 86.0, "매도호가¢": 95.0, "거래량$": 0, "24h거래량$": 0}], "전체선택지": [{"이름": "80.0% 상회", "확률%": 85.0, "전일대비%p": 0.0, "매수호가¢": 77.0, "매도호가¢": 86.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "85.0% 상회", "확률%": 71.0, "전일대비%p": 0.0, "매수호가¢": 65.0, "매도호가¢": 74.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "110.0% 상회", "확률%": 11.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 12.0, "거래량$": 90, "24h거래량$": 0}, {"이름": "75.0% 상회", "확률%": 90.5, "전일대비%p": null, "매수호가¢": 86.0, "매도호가¢": 95.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "90.0% 상회", "확률%": 53.5, "전일대비%p": null, "매수호가¢": 49.0, "매도호가¢": 58.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "95.0% 상회", "확률%": 37.5, "전일대비%p": null, "매수호가¢": 33.0, "매도호가¢": 42.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "100.0% 상회", "확률%": 24.5, "전일대비%p": null, "매수호가¢": 20.0, "매도호가¢": 29.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "105.0% 상회", "확률%": 13.5, "전일대비%p": null, "매수호가¢": 9.0, "매도호가¢": 18.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "70.0% 상회", "확률%": 98.0, "전일대비%p": 0.0, "매수호가¢": 91.0, "매도호가¢": 98.0, "거래량$": 110, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxskexpyoy", "polymarket_url": "https://polymarket.com/markets?_q=South+Korea+exports", "해석": "한국 반도체·자동차·조선 수출 모멘텀 → 코스피 대형주 영업이익과 외국인 순매수 방향 결정", "요약": "[한국·동아시아] 한국 수출 전년동월비 (South Korea exports YoY for November) · 누적 $600 (24h $0): Above 80.0% 85%, Above 85.0% 71%, Above 110.0% 11%, Above 75.0% 90%"}, {"분류": "한국·동아시아", "시리즈": "KXUSAKIM", "티커": "KXUSAKIM-29", "우리말": "김정은 방미·북미 정상 만남", "제목": "Will Kim Jong-Un visit the US during Trump's term?", "24h거래량$": 0, "누적거래량$": 18751, "선택지": [{"이름": "트럼프 임기 내", "확률%": 9.9, "전일대비%p": 0.0, "매수호가¢": 8.6, "매도호가¢": 9.0, "거래량$": 18751, "24h거래량$": 0}], "전체선택지": [{"이름": "트럼프 임기 내", "확률%": 9.9, "전일대비%p": 0.0, "매수호가¢": 8.6, "매도호가¢": 9.0, "거래량$": 18751, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxusakim", "polymarket_url": "https://polymarket.com/markets?_q=Kim+Jong+Un", "해석": "한반도 지정학 긴장 완화 또는 도발 국면 가늠자(거래량 규모를 함께 확인해 과대해석 경계)", "요약": "[한국·동아시아] 김정은 방미·북미 정상 만남 (Will Kim Jong-Un visit the US during Trump's term?) · 누적 $18,751 (24h $0): During Trump's term 10%"}, {"분류": "한국·동아시아", "시리즈": "KXXITAIWAN", "티커": "KXXITAIWAN", "우리말": "시진핑 대만 방문 여부", "제목": "When will Xi Jinping visit Taiwan?", "24h거래량$": 517, "누적거래량$": 58264, "선택지": [{"이름": "2030년 전", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 22.0, "거래량$": 8528, "24h거래량$": 0}, {"이름": "2029년 전", "확률%": 16.0, "전일대비%p": -1.0, "매수호가¢": 17.0, "매도호가¢": 20.0, "거래량$": 16059, "24h거래량$": 517}, {"이름": "2028년 전", "확률%": 9.6, "전일대비%p": 0.0, "매수호가¢": 6.1, "매도호가¢": 9.3, "거래량$": 12011, "24h거래량$": 0}, {"이름": "2027년 전", "확률%": 3.8, "전일대비%p": 0.0, "매수호가¢": 1.2, "매도호가¢": 3.5, "거래량$": 21666, "24h거래량$": 0}], "전체선택지": [{"이름": "2030년 전", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 22.0, "거래량$": 8528, "24h거래량$": 0}, {"이름": "2029년 전", "확률%": 16.0, "전일대비%p": -1.0, "매수호가¢": 17.0, "매도호가¢": 20.0, "거래량$": 16059, "24h거래량$": 517}, {"이름": "2028년 전", "확률%": 9.6, "전일대비%p": 0.0, "매수호가¢": 6.1, "매도호가¢": 9.3, "거래량$": 12011, "24h거래량$": 0}, {"이름": "2027년 전", "확률%": 3.8, "전일대비%p": 0.0, "매수호가¢": 1.2, "매도호가¢": 3.5, "거래량$": 21666, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxxitaiwan", "polymarket_url": "https://polymarket.com/markets?_q=China+Taiwan", "해석": "대만 해협·양안 관계 리스크 → 글로벌 파운드리(TSMC)·AI 반도체 공급망 및 한국 반도체 반사/동조 변수", "요약": "[한국·동아시아] 시진핑 대만 방문 여부 (When will Xi Jinping visit Taiwan?) · 누적 $58,264 (24h $517): Before 2030 26%, Before 2029 16%(-1%p), Before 2028 10%, Before 2027 4%"}], "요약줄": ["[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Dec 2026?) · 누적 $4,573,102 (24h $154,010): Hike 25bps 78%(+1%p), Fed maintains rate 22%(-1%p), Hike >25bps 1%(-1%p), Cut 25bps 1%(-1%p)", "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Jan 2027?) · 누적 $371,109 (24h $49): Fed maintains rate 76%(+2%p), Hike 25bps 21%, Cut 25bps 3%, Hike >25bps 2%", "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Dec 2026 meeting?) · 누적 $894,278 (24h $4,122): Above 4.00% 80%(+4%p), Above 5.00% 2%, Above 4.50% 1%, Above 4.25% 1%", "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Jan 2027 meeting?) · 누적 $60,570 (24h $0): Above 3.25% 94%, Above 4.00% 90%, Above 3.00% 95%, Above 4.25% 15%", "[Fed·거시] 연내 Fed 금리 인하 여부 (Fed rate cut before 2027?) · 누적 $1,711,180 (24h $5,723): Cuts 2%", "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in October) · 누적 $1,331,912 (24h $113,629): Above 0.1% 94%, Above 0.2% 54%(-8%p), Above 0.3% 13%(-2%p), Above 0.4% 1%(-2%p)", "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in November) · 누적 $171,472 (24h $10,803): Above 0.1% 26%(-11%p), Above -0.1% 70%(-3%p), Above 0.0% 63%(-1%p), Above 0.4% 4%(-3%p)", "[Fed·거시] 미국 근원 CPI 전월비 (Core CPI in October) · 누적 $992,976 (24h $47,720): Above 0.1% 80%(-7%p), Above 0.2% 33%(-8%p), Above 0.3% 5%(-1%p), Above 0.0% 98%(-1%p)", "[Fed·거시] 미국 공식 경기침체(NBER) (Recession this year?) · 누적 $4,149,687 (24h $16,069): Starts 3%(+1%p)", "[Fed·거시] 미국 공식 경기침체(NBER) (Recession in 2027?) · 누적 $974,232 (24h $3,578): Yes 22%(+1%p)", "[지정학·무역·자산] 호르무즈 해협 통행 정상화 시점 (When will traffic at the Strait of Hormuz return to normal?) · 누적 $14,968,687 (24h $126,305): Before Jan 1, 2027 6%(-0%p), Before Dec 1, 2026 3%(+1%p), Before Jul 1, 2027 38%, Before Apr 1, 2027 18%", "[지정학·무역·자산] 미·이란 핵 합의 여부 (US-Iran nuclear deal?) · 누적 $6,022,402 (24h $69,165): Before Jan 1, 2027 7%(+1%p), Before Dec 1, 2026 3%(+1%p), Before Jan 20, 2029 50%(+3%p), Before Jan 1, 2028 41%(+6%p)", "[지정학·무역·자산] WTI 유가 단기 가격 구간 (Oil Price (WTI) on Nov 9, 2026?) · 누적 $218,926 (24h $163,475): Above $89.99 3%(-59%p), Above $87.49 53%(-32%p), Above $87.99 38%(-48%p), Above $89.49 5%(-63%p)", "[지정학·무역·자산] 미국의 대중국 관세율 (What will the tariff rate on Chinese imports be on Jan 1, 2027?) · 누적 $9,548 (24h $0): 20% or above 97%, 50% or above 22%, 30% or above 78%, 15% or above 90%", "[한국·동아시아] 한국은행 금통위 기준금리 결정 (Bank of Korea rate decision in November) · 누적 $6,773 (24h $0): Hike 1-25bps 96%, Maintain current rate 3%, Hike more than 25bps 1%, Cut more than 25bps 1%", "[한국·동아시아] 한국 수출 전년동월비 (South Korea exports YoY for November) · 누적 $600 (24h $0): Above 80.0% 85%, Above 85.0% 71%, Above 110.0% 11%, Above 75.0% 90%", "[한국·동아시아] 김정은 방미·북미 정상 만남 (Will Kim Jong-Un visit the US during Trump's term?) · 누적 $18,751 (24h $0): During Trump's term 10%", "[한국·동아시아] 시진핑 대만 방문 여부 (When will Xi Jinping visit Taiwan?) · 누적 $58,264 (24h $517): Before 2030 26%, Before 2029 16%(-1%p), Before 2028 10%, Before 2027 4%"]};
+const PM = {"출처": "Kalshi(미국 CFTC 공인 예측시장 실시간 API) — Polymarket 은 GPT/클로드 웹 검색으로 교차 대조", "시각": "2026-11-10 23:54", "시장": [{"분류": "Fed·거시", "시리즈": "KXFEDDECISION", "티커": "KXFEDDECISION-26DEC", "우리말": "다음 FOMC 금리 결정", "제목": "Fed decision in Dec 2026?", "24h거래량$": 2643052, "누적거래량$": 7136966, "선택지": [{"이름": "25bp 인상", "확률%": 85.0, "전일대비%p": 8.0, "매수호가¢": 83.0, "매도호가¢": 85.0, "거래량$": 1971740, "24h거래량$": 566399}, {"이름": "50bp+ 인상", "확률%": 14.0, "전일대비%p": 12.0, "매수호가¢": 12.0, "매도호가¢": 14.0, "거래량$": 2447019, "24h거래량$": 1467700}, {"이름": "동결", "확률%": 4.0, "전일대비%p": -18.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 1674738, "24h거래량$": 393635}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 797323, "24h거래량$": 214850}], "전체선택지": [{"이름": "25bp 인상", "확률%": 85.0, "전일대비%p": 8.0, "매수호가¢": 83.0, "매도호가¢": 85.0, "거래량$": 1971740, "24h거래량$": 566399}, {"이름": "50bp+ 인상", "확률%": 14.0, "전일대비%p": 12.0, "매수호가¢": 12.0, "매도호가¢": 14.0, "거래량$": 2447019, "24h거래량$": 1467700}, {"이름": "동결", "확률%": 4.0, "전일대비%p": -18.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 1674738, "24h거래량$": 393635}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 797323, "24h거래량$": 214850}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 246146, "24h거래량$": 468}], "kalshi_url": "https://kalshi.com/markets/kxfeddecision", "polymarket_url": "https://polymarket.com/markets?_q=Fed+decision", "해석": "Fed 기준금리 결정 직접 지표 → 미 10년물 금리·달러인덱스 → 나스닥 밸류에이션·외국인 국장 수급 직결", "요약": "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Dec 2026?) · 누적 $7,136,966 (24h $2,643,052): Hike 25bps 85%(+8%p), Hike >25bps 14%(+12%p), Fed maintains rate 4%(-18%p), Cut 25bps 1%(-1%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXFEDDECISION", "티커": "KXFEDDECISION-27JAN", "우리말": "다음 FOMC 금리 결정", "제목": "Fed decision in Jan 2027?", "24h거래량$": 10024, "누적거래량$": 381133, "선택지": [{"이름": "동결", "확률%": 58.0, "전일대비%p": -18.0, "매수호가¢": 58.0, "매도호가¢": 59.0, "거래량$": 87918, "24h거래량$": 2332}, {"이름": "25bp 인상", "확률%": 40.0, "전일대비%p": 19.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 208049, "24h거래량$": 3299}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 42776, "24h거래량$": 1533}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 23535, "24h거래량$": 2860}], "전체선택지": [{"이름": "동결", "확률%": 58.0, "전일대비%p": -18.0, "매수호가¢": 58.0, "매도호가¢": 59.0, "거래량$": 87918, "24h거래량$": 2332}, {"이름": "25bp 인상", "확률%": 40.0, "전일대비%p": 19.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 208049, "24h거래량$": 3299}, {"이름": "25bp 인하", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 42776, "24h거래량$": 1533}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 23535, "24h거래량$": 2860}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 18855, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfeddecision", "polymarket_url": "https://polymarket.com/markets?_q=Fed+decision", "해석": "Fed 기준금리 결정 직접 지표 → 미 10년물 금리·달러인덱스 → 나스닥 밸류에이션·외국인 국장 수급 직결", "요약": "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Jan 2027?) · 누적 $381,133 (24h $10,024): Fed maintains rate 58%(-18%p), Hike 25bps 40%(+19%p), Cut 25bps 1%(-2%p), Hike >25bps 1%(-1%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXFED", "티커": "KXFED-26DEC", "우리말": "FOMC 이후 기준금리 상단", "제목": "Fed funds rate after Dec 2026 meeting?", "24h거래량$": 120015, "누적거래량$": 1010694, "선택지": [{"이름": "4.25% 상회", "확률%": 13.0, "전일대비%p": 11.0, "매수호가¢": 12.0, "매도호가¢": 13.0, "거래량$": 235910, "24h거래량$": 99471}, {"이름": "5.00% 상회", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1719, "24h거래량$": 0}, {"이름": "4.50% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 305187, "24h거래량$": 30}, {"이름": "4.00% 상회", "확률%": 98.0, "전일대비%p": 21.0, "매수호가¢": 97.0, "매도호가¢": 98.0, "거래량$": 274927, "24h거래량$": 20498}], "전체선택지": [{"이름": "4.25% 상회", "확률%": 13.0, "전일대비%p": 11.0, "매수호가¢": 12.0, "매도호가¢": 13.0, "거래량$": 235910, "24h거래량$": 99471}, {"이름": "5.00% 상회", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1719, "24h거래량$": 0}, {"이름": "4.50% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 305187, "24h거래량$": 30}, {"이름": "4.00% 상회", "확률%": 98.0, "전일대비%p": 21.0, "매수호가¢": 97.0, "매도호가¢": 98.0, "거래량$": 274927, "24h거래량$": 20498}, {"이름": "3.75% 상회", "확률%": 99.0, "전일대비%p": 1.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 98148, "24h거래량$": 4}, {"이름": "3.50% 상회", "확률%": 98.0, "전일대비%p": 0.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 46057, "24h거래량$": 10}, {"이름": "2.75% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 23712, "24h거래량$": 0}, {"이름": "3.25% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 14093, "24h거래량$": 2}, {"이름": "3.00% 상회", "확률%": 99.0, "전일대비%p": 0.0, "매수호가¢": 99.0, "매도호가¢": 100.0, "거래량$": 8062, "24h거래량$": 0}, {"이름": "4.75% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 1933, "24h거래량$": 0}, {"이름": "5.25% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 945, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfed", "polymarket_url": "https://polymarket.com/markets?_q=Fed+funds+rate", "해석": "연말·연초 기준금리 상단 레벨 → 성장주·기술주 할인율과 레버리지 ETF(TQQQ·SOXL) 보유 비용 결정", "요약": "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Dec 2026 meeting?) · 누적 $1,010,694 (24h $120,015): Above 4.25% 13%(+11%p), Above 5.00% 2%, Above 4.50% 1%, Above 4.00% 98%(+21%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXFED", "티커": "KXFED-27JAN", "우리말": "FOMC 이후 기준금리 상단", "제목": "Fed funds rate after Jan 2027 meeting?", "24h거래량$": 455, "누적거래량$": 61025, "선택지": [{"이름": "3.25% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 13355, "24h거래량$": 0}, {"이름": "3.50% 상회", "확률%": 97.0, "전일대비%p": -1.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 7511, "24h거래량$": 6}, {"이름": "4.00% 상회", "확률%": 97.0, "전일대비%p": 7.0, "매수호가¢": 91.0, "매도호가¢": 98.0, "거래량$": 6349, "24h거래량$": 15}, {"이름": "3.00% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 99.0, "거래량$": 5580, "24h거래량$": 0}], "전체선택지": [{"이름": "3.25% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 13355, "24h거래량$": 0}, {"이름": "3.50% 상회", "확률%": 97.0, "전일대비%p": -1.0, "매수호가¢": 94.0, "매도호가¢": 99.0, "거래량$": 7511, "24h거래량$": 6}, {"이름": "4.00% 상회", "확률%": 97.0, "전일대비%p": 7.0, "매수호가¢": 91.0, "매도호가¢": 98.0, "거래량$": 6349, "24h거래량$": 15}, {"이름": "3.00% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 99.0, "거래량$": 5580, "24h거래량$": 0}, {"이름": "4.25% 상회", "확률%": 31.0, "전일대비%p": 16.0, "매수호가¢": 31.0, "매도호가¢": 55.0, "거래량$": 3328, "24h거래량$": 434}, {"이름": "1.25% 상회", "확률%": 93.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2632, "24h거래량$": 0}, {"이름": "3.75% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 91.0, "매도호가¢": 98.0, "거래량$": 2574, "24h거래량$": 0}, {"이름": "2.50% 상회", "확률%": 93.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 99.0, "거래량$": 2454, "24h거래량$": 0}, {"이름": "1.50% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 100.0, "거래량$": 2417, "24h거래량$": 0}, {"이름": "0.75% 상회", "확률%": 94.0, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 100.0, "거래량$": 2148, "24h거래량$": 0}, {"이름": "2.00% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 95.0, "매도호가¢": 100.0, "거래량$": 1984, "24h거래량$": 0}, {"이름": "2.25% 상회", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 96.0, "매도호가¢": 99.0, "거래량$": 1712, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxfed", "polymarket_url": "https://polymarket.com/markets?_q=Fed+funds+rate", "해석": "연말·연초 기준금리 상단 레벨 → 성장주·기술주 할인율과 레버리지 ETF(TQQQ·SOXL) 보유 비용 결정", "요약": "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Jan 2027 meeting?) · 누적 $61,025 (24h $455): Above 3.25% 94%, Above 3.50% 97%(-1%p), Above 4.00% 97%(+7%p), Above 3.00% 95%", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXRATECUT", "티커": "KXRATECUT-26DEC31", "우리말": "연내 Fed 금리 인하 여부", "제목": "Fed rate cut before 2027?", "24h거래량$": 18841, "누적거래량$": 1726084, "선택지": [{"이름": "연내 인하", "확률%": 1.7, "전일대비%p": -0.1, "매수호가¢": 1.8, "매도호가¢": 2.3, "거래량$": 1726084, "24h거래량$": 18841}], "전체선택지": [{"이름": "연내 인하", "확률%": 1.7, "전일대비%p": -0.1, "매수호가¢": 1.8, "매도호가¢": 2.3, "거래량$": 1726084, "24h거래량$": 18841}], "kalshi_url": "https://kalshi.com/markets/kxratecut", "polymarket_url": "https://polymarket.com/markets?_q=Fed+rate+cut", "해석": "금리 인하 기대 소멸 시 고밸류 기술주 멀티플 압박 · 배당·방어주 및 달러 강세 환경 지속", "요약": "[Fed·거시] 연내 Fed 금리 인하 여부 (Fed rate cut before 2027?) · 누적 $1,726,084 (24h $18,841): Cuts 2%(-0%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXCPI", "티커": "KXCPI-26NOV", "우리말": "미국 소비자물가(CPI) 전월비", "제목": "CPI in November", "24h거래량$": 33665, "누적거래량$": 201284, "선택지": [{"이름": "0.1% 상회", "확률%": 20.0, "전일대비%p": -6.0, "매수호가¢": 19.0, "매도호가¢": 20.0, "거래량$": 42134, "24h거래량$": 2889}, {"이름": "-0.1% 상회", "확률%": 62.0, "전일대비%p": -8.0, "매수호가¢": 61.0, "매도호가¢": 71.0, "거래량$": 29709, "24h거래량$": 1395}, {"이름": "0.2% 상회", "확률%": 7.0, "전일대비%p": -7.0, "매수호가¢": 3.0, "매도호가¢": 7.0, "거래량$": 29082, "24h거래량$": 8164}, {"이름": "0.0% 상회", "확률%": 44.0, "전일대비%p": -19.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 27926, "24h거래량$": 3819}], "전체선택지": [{"이름": "0.1% 상회", "확률%": 20.0, "전일대비%p": -6.0, "매수호가¢": 19.0, "매도호가¢": 20.0, "거래량$": 42134, "24h거래량$": 2889}, {"이름": "-0.1% 상회", "확률%": 62.0, "전일대비%p": -8.0, "매수호가¢": 61.0, "매도호가¢": 71.0, "거래량$": 29709, "24h거래량$": 1395}, {"이름": "0.2% 상회", "확률%": 7.0, "전일대비%p": -7.0, "매수호가¢": 3.0, "매도호가¢": 7.0, "거래량$": 29082, "24h거래량$": 8164}, {"이름": "0.0% 상회", "확률%": 44.0, "전일대비%p": -19.0, "매수호가¢": 40.0, "매도호가¢": 44.0, "거래량$": 27926, "24h거래량$": 3819}, {"이름": "0.5% 상회", "확률%": 2.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 24625, "24h거래량$": 7500}, {"이름": "0.4% 상회", "확률%": 3.0, "전일대비%p": -1.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 23116, "24h거래량$": 70}, {"이름": "0.3% 상회", "확률%": 5.0, "전일대비%p": -3.0, "매수호가¢": 2.0, "매도호가¢": 5.0, "거래량$": 20365, "24h거래량$": 6204}, {"이름": "-0.2% 상회", "확률%": 83.0, "전일대비%p": -10.0, "매수호가¢": 83.0, "매도호가¢": 91.0, "거래량$": 2388, "24h거래량$": 1883}, {"이름": "-0.3% 상회", "확률%": 94.0, "전일대비%p": 2.0, "매수호가¢": 91.0, "매도호가¢": 94.0, "거래량$": 1938, "24h거래량$": 1742}], "kalshi_url": "https://kalshi.com/markets/kxcpi", "polymarket_url": "https://polymarket.com/markets?_q=CPI+inflation", "해석": "유가·관세가 헤드라인 물가로 전이되는 속도 → 전월비 0.3% 이상 확률 상승 시 금리 인상·동결 장기화", "요약": "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in November) · 누적 $201,284 (24h $33,665): Above 0.1% 20%(-6%p), Above -0.1% 62%(-8%p), Above 0.2% 7%(-7%p), Above 0.0% 44%(-19%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXCPI", "티커": "KXCPI-26DEC", "우리말": "미국 소비자물가(CPI) 전월비", "제목": "CPI in December", "24h거래량$": 5820, "누적거래량$": 137214, "선택지": [{"이름": "0.8% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 5.0, "거래량$": 20986, "24h거래량$": 0}, {"이름": "0.0% 상회", "확률%": 80.0, "전일대비%p": -9.0, "매수호가¢": 72.0, "매도호가¢": 78.0, "거래량$": 15013, "24h거래량$": 2758}, {"이름": "0.4% 상회", "확률%": 18.0, "전일대비%p": -3.0, "매수호가¢": 6.0, "매도호가¢": 18.0, "거래량$": 14498, "24h거래량$": 296}, {"이름": "-0.1% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 92.0, "매도호가¢": 95.0, "거래량$": 13962, "24h거래량$": 402}], "전체선택지": [{"이름": "0.8% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 5.0, "거래량$": 20986, "24h거래량$": 0}, {"이름": "0.0% 상회", "확률%": 80.0, "전일대비%p": -9.0, "매수호가¢": 72.0, "매도호가¢": 78.0, "거래량$": 15013, "24h거래량$": 2758}, {"이름": "0.4% 상회", "확률%": 18.0, "전일대비%p": -3.0, "매수호가¢": 6.0, "매도호가¢": 18.0, "거래량$": 14498, "24h거래량$": 296}, {"이름": "-0.1% 상회", "확률%": 95.0, "전일대비%p": 0.0, "매수호가¢": 92.0, "매도호가¢": 95.0, "거래량$": 13962, "24h거래량$": 402}, {"이름": "0.5% 상회", "확률%": 13.0, "전일대비%p": 4.0, "매수호가¢": 6.0, "매도호가¢": 13.0, "거래량$": 13849, "24h거래량$": 334}, {"이름": "0.6% 상회", "확률%": 7.0, "전일대비%p": 0.0, "매수호가¢": 4.0, "매도호가¢": 14.0, "거래량$": 13396, "24h거래량$": 0}, {"이름": "0.7% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 13166, "24h거래량$": 0}, {"이름": "0.9% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 12557, "24h거래량$": 0}, {"이름": "0.3% 상회", "확률%": 35.0, "전일대비%p": 0.0, "매수호가¢": 16.0, "매도호가¢": 29.0, "거래량$": 8870, "24h거래량$": 0}, {"이름": "0.2% 상회", "확률%": 42.0, "전일대비%p": -19.0, "매수호가¢": 18.0, "매도호가¢": 54.0, "거래량$": 5834, "24h거래량$": 1258}, {"이름": "0.1% 상회", "확률%": 60.0, "전일대비%p": -20.0, "매수호가¢": 53.0, "매도호가¢": 65.0, "거래량$": 5084, "24h거래량$": 773}], "kalshi_url": "https://kalshi.com/markets/kxcpi", "polymarket_url": "https://polymarket.com/markets?_q=CPI+inflation", "해석": "유가·관세가 헤드라인 물가로 전이되는 속도 → 전월비 0.3% 이상 확률 상승 시 금리 인상·동결 장기화", "요약": "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in December) · 누적 $137,214 (24h $5,820): Above 0.8% 4%, Above 0.0% 80%(-9%p), Above 0.4% 18%(-3%p), Above -0.1% 95%", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXCPICORE", "티커": "KXCPICORE-26NOV", "우리말": "미국 근원 CPI 전월비", "제목": "Core CPI in November", "24h거래량$": 25913, "누적거래량$": 164599, "선택지": [{"이름": "0.4% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 23839, "24h거래량$": 0}, {"이름": "0.3% 상회", "확률%": 13.0, "전일대비%p": -1.0, "매수호가¢": 10.0, "매도호가¢": 13.0, "거래량$": 20195, "24h거래량$": 3001}, {"이름": "0.2% 상회", "확률%": 35.0, "전일대비%p": -4.0, "매수호가¢": 34.0, "매도호가¢": 43.0, "거래량$": 16735, "24h거래량$": 136}, {"이름": "0.1% 상회", "확률%": 74.0, "전일대비%p": -8.0, "매수호가¢": 75.0, "매도호가¢": 77.0, "거래량$": 9243, "24h거래량$": 1396}], "전체선택지": [{"이름": "0.4% 상회", "확률%": 4.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 4.0, "거래량$": 23839, "24h거래량$": 0}, {"이름": "0.3% 상회", "확률%": 13.0, "전일대비%p": -1.0, "매수호가¢": 10.0, "매도호가¢": 13.0, "거래량$": 20195, "24h거래량$": 3001}, {"이름": "0.2% 상회", "확률%": 35.0, "전일대비%p": -4.0, "매수호가¢": 34.0, "매도호가¢": 43.0, "거래량$": 16735, "24h거래량$": 136}, {"이름": "0.1% 상회", "확률%": 74.0, "전일대비%p": -8.0, "매수호가¢": 75.0, "매도호가¢": 77.0, "거래량$": 9243, "24h거래량$": 1396}, {"이름": "0.6% 상회", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 4301, "24h거래량$": 0}, {"이름": "0.7% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 45585, "24h거래량$": 6000}, {"이름": "0.8% 상회", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 16054, "24h거래량$": 13001}, {"이름": "0.5% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 8767, "24h거래량$": 0}, {"이름": "0.0% 상회", "확률%": 98.0, "전일대비%p": 0.0, "매수호가¢": 96.0, "매도호가¢": 97.0, "거래량$": 8243, "24h거래량$": 0}, {"이름": "0.9% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 8121, "24h거래량$": 2379}, {"이름": "1.0% 상회", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 3514, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxcpicore", "polymarket_url": "https://polymarket.com/markets?_q=Core+CPI", "해석": "에너지·식품을 뺀 기조적 물가 압력 → Fed 가 가장 중시하는 통화정책 방향타", "요약": "[Fed·거시] 미국 근원 CPI 전월비 (Core CPI in November) · 누적 $164,599 (24h $25,913): Above 0.4% 4%, Above 0.3% 13%(-1%p), Above 0.2% 35%(-4%p), Above 0.1% 74%(-8%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXRECSSNBER", "티커": "KXRECSSNBER-26", "우리말": "미국 공식 경기침체(NBER)", "제목": "Recession this year?", "24h거래량$": 8437, "누적거래량$": 4157675, "선택지": [{"이름": "침체 진입", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 4157675, "24h거래량$": 8437}], "전체선택지": [{"이름": "침체 진입", "확률%": 1.0, "전일대비%p": -1.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 4157675, "24h거래량$": 8437}], "kalshi_url": "https://kalshi.com/markets/kxrecssnber", "polymarket_url": "https://polymarket.com/markets?_q=US+recession", "해석": "침체 확률 급등 시 기업 이익(EPS) 하향 위험 · 낮을 때는 금리만 안정되면 실적 장세 유지", "요약": "[Fed·거시] 미국 공식 경기침체(NBER) (Recession this year?) · 누적 $4,157,675 (24h $8,437): Starts 1%(-1%p)", "출처": "Kalshi 실시간"}, {"분류": "Fed·거시", "시리즈": "KXRECSSNBER", "티커": "KXRECSSNBER-27", "우리말": "미국 공식 경기침체(NBER)", "제목": "Recession in 2027?", "24h거래량$": 2044, "누적거래량$": 976109, "선택지": [{"이름": "예(발생)", "확률%": 22.0, "전일대비%p": 1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 976109, "24h거래량$": 2044}], "전체선택지": [{"이름": "예(발생)", "확률%": 22.0, "전일대비%p": 1.0, "매수호가¢": 21.0, "매도호가¢": 22.0, "거래량$": 976109, "24h거래량$": 2044}], "kalshi_url": "https://kalshi.com/markets/kxrecssnber", "polymarket_url": "https://polymarket.com/markets?_q=US+recession", "해석": "침체 확률 급등 시 기업 이익(EPS) 하향 위험 · 낮을 때는 금리만 안정되면 실적 장세 유지", "요약": "[Fed·거시] 미국 공식 경기침체(NBER) (Recession in 2027?) · 누적 $976,109 (24h $2,044): Yes 22%(+1%p)", "출처": "Kalshi 실시간"}, {"분류": "지정학·무역·자산", "시리즈": "KXHORMUZNORM", "티커": "KXHORMUZNORM-26MAR17", "우리말": "호르무즈 해협 통행 정상화 시점", "제목": "When will traffic at the Strait of Hormuz return to normal?", "24h거래량$": 344080, "누적거래량$": 15299867, "선택지": [{"이름": "2027년 1월 전", "확률%": 8.0, "전일대비%p": 2.6, "매수호가¢": 8.0, "매도호가¢": 8.1, "거래량$": 3923140, "24h거래량$": 78006}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 2181407, "24h거래량$": 210182}, {"이름": "2027년 7월 전", "확률%": 40.0, "전일대비%p": 2.0, "매수호가¢": 40.0, "매도호가¢": 42.0, "거래량$": 1665365, "24h거래량$": 867}, {"이름": "2027년 4월 전", "확률%": 20.0, "전일대비%p": 1.0, "매수호가¢": 20.0, "매도호가¢": 25.0, "거래량$": 879489, "24h거래량$": 186}], "전체선택지": [{"이름": "2027년 1월 전", "확률%": 8.0, "전일대비%p": 2.6, "매수호가¢": 8.0, "매도호가¢": 8.1, "거래량$": 3923140, "24h거래량$": 78006}, {"이름": "2026년 12월 전", "확률%": 3.0, "전일대비%p": 0.0, "매수호가¢": 2.0, "매도호가¢": 3.0, "거래량$": 2181407, "24h거래량$": 210182}, {"이름": "2027년 7월 전", "확률%": 40.0, "전일대비%p": 2.0, "매수호가¢": 40.0, "매도호가¢": 42.0, "거래량$": 1665365, "24h거래량$": 867}, {"이름": "2027년 4월 전", "확률%": 20.0, "전일대비%p": 1.0, "매수호가¢": 20.0, "매도호가¢": 25.0, "거래량$": 879489, "24h거래량$": 186}, {"이름": "2028년 1월 전", "확률%": 56.0, "전일대비%p": 3.0, "매수호가¢": 55.0, "매도호가¢": 56.0, "거래량$": 92659, "24h거래량$": 2060}, {"이름": "2027년 11월 전", "확률%": 47.0, "전일대비%p": 0.0, "매수호가¢": 47.0, "매도호가¢": 48.0, "거래량$": 81563, "24h거래량$": 2396}, {"이름": "2029년 1월 전", "확률%": 69.0, "전일대비%p": 0.0, "매수호가¢": 69.0, "매도호가¢": 70.0, "거래량$": 65659, "24h거래량$": 308}, {"이름": "2028년 7월 전", "확률%": 63.0, "전일대비%p": 2.0, "매수호가¢": 64.0, "매도호가¢": 68.0, "거래량$": 56000, "24h거래량$": 2840}, {"이름": "2027년 6월 전", "확률%": 33.0, "전일대비%p": 1.0, "매수호가¢": 33.0, "매도호가¢": 35.0, "거래량$": 30710, "24h거래량$": 25033}, {"이름": "2027년 2월 전", "확률%": 11.0, "전일대비%p": 1.0, "매수호가¢": 11.0, "매도호가¢": 15.0, "거래량$": 29825, "24h거래량$": 15894}, {"이름": "2027년 12월 전", "확률%": 50.0, "전일대비%p": 0.0, "매수호가¢": 50.0, "매도호가¢": 54.0, "거래량$": 24225, "24h거래량$": 3580}, {"이름": "2027년 5월 전", "확률%": 23.0, "전일대비%p": -1.0, "매수호가¢": 23.0, "매도호가¢": 27.0, "거래량$": 7538, "24h거래량$": 1334}], "kalshi_url": "https://kalshi.com/markets/kxhormuznorm", "polymarket_url": "https://polymarket.com/markets?_q=Strait+of+Hormuz", "해석": "글로벌 원유 수송 핵심 병목 → 정상화 지연(낮은 확률)은 유가 하방 경직성·인플레이션 장기화 요인", "요약": "[지정학·무역·자산] 호르무즈 해협 통행 정상화 시점 (When will traffic at the Strait of Hormuz return to normal?) · 누적 $15,299,867 (24h $344,080): Before Jan 1, 2027 8%(+3%p), Before Dec 1, 2026 3%, Before Jul 1, 2027 40%(+2%p), Before Apr 1, 2027 20%(+1%p)", "출처": "Kalshi 실시간"}, {"분류": "지정학·무역·자산", "시리즈": "KXUSAIRANAGREEMENT", "티커": "KXUSAIRANAGREEMENT-27", "우리말": "미·이란 핵 합의 여부", "제목": "US-Iran nuclear deal?", "24h거래량$": 125949, "누적거래량$": 6136677, "선택지": [{"이름": "2027년 1월 전", "확률%": 7.8, "전일대비%p": 0.8, "매수호가¢": 7.7, "매도호가¢": 7.8, "거래량$": 2049015, "24h거래량$": 39608}, {"이름": "2026년 12월 전", "확률%": 5.0, "전일대비%p": 1.0, "매수호가¢": 4.0, "매도호가¢": 5.0, "거래량$": 746948, "24h거래량$": 70586}, {"이름": "2029년 1월 전", "확률%": 50.0, "전일대비%p": -4.0, "매수호가¢": 47.0, "매도호가¢": 50.0, "거래량$": 148904, "24h거래량$": 1037}, {"이름": "2028년 1월 전", "확률%": 43.0, "전일대비%p": -1.0, "매수호가¢": 41.0, "매도호가¢": 43.0, "거래량$": 145395, "24h거래량$": 3119}], "전체선택지": [{"이름": "2027년 1월 전", "확률%": 7.8, "전일대비%p": 0.8, "매수호가¢": 7.7, "매도호가¢": 7.8, "거래량$": 2049015, "24h거래량$": 39608}, {"이름": "2026년 12월 전", "확률%": 5.0, "전일대비%p": 1.0, "매수호가¢": 4.0, "매도호가¢": 5.0, "거래량$": 746948, "24h거래량$": 70586}, {"이름": "2029년 1월 전", "확률%": 50.0, "전일대비%p": -4.0, "매수호가¢": 47.0, "매도호가¢": 50.0, "거래량$": 148904, "24h거래량$": 1037}, {"이름": "2028년 1월 전", "확률%": 43.0, "전일대비%p": -1.0, "매수호가¢": 41.0, "매도호가¢": 43.0, "거래량$": 145395, "24h거래량$": 3119}, {"이름": "2027년 3월 전", "확률%": 18.0, "전일대비%p": 3.0, "매수호가¢": 18.0, "매도호가¢": 19.0, "거래량$": 107337, "24h거래량$": 1182}, {"이름": "2027년 2월 전", "확률%": 14.0, "전일대비%p": 2.0, "매수호가¢": 13.0, "매도호가¢": 14.0, "거래량$": 57880, "24h거래량$": 10313}, {"이름": "2027년 7월 전", "확률%": 20.0, "전일대비%p": 9.0, "매수호가¢": 20.0, "매도호가¢": 33.0, "거래량$": 87, "24h거래량$": 84}, {"이름": "2027년 10월 전", "확률%": 45.0, "전일대비%p": 31.0, "매수호가¢": 21.0, "매도호가¢": 43.0, "거래량$": 21, "24h거래량$": 19}, {"이름": "2026년 11월 전", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 100.0, "거래량$": 1738516, "24h거래량$": 0}, {"이름": "2026년 10월 전", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 100.0, "거래량$": 1142574, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxusairanagreement", "polymarket_url": "https://polymarket.com/markets?_q=Iran+nuclear+deal", "해석": "합의 확률 상승 시 중동 전쟁 프리미엄 축소·유가 안정 → 글로벌 위험자산(나스닥·국장) 안도 랠리 재료", "요약": "[지정학·무역·자산] 미·이란 핵 합의 여부 (US-Iran nuclear deal?) · 누적 $6,136,677 (24h $125,949): Before Jan 1, 2027 8%(+1%p), Before Dec 1, 2026 5%(+1%p), Before Jan 20, 2029 50%(-4%p), Before Jan 1, 2028 43%(-1%p)", "출처": "Kalshi 실시간"}, {"분류": "지정학·무역·자산", "시리즈": "KXWTI", "티커": "KXWTI-26NOV1014", "우리말": "WTI 유가 단기 가격 구간", "제목": "Oil Price (WTI) on Nov 10, 2026?", "24h거래량$": 85065, "누적거래량$": 93560, "선택지": [{"이름": "$85.49 상회", "확률%": 50.0, "전일대비%p": -30.0, "매수호가¢": 54.0, "매도호가¢": 55.0, "거래량$": 8228, "24h거래량$": 8223}, {"이름": "$83.49 상회", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 91.0, "매도호가¢": 92.0, "거래량$": 7531, "24h거래량$": 6851}, {"이름": "$86.49 상회", "확률%": 23.0, "전일대비%p": -26.0, "매수호가¢": 25.0, "매도호가¢": 26.0, "거래량$": 5767, "24h거래량$": 5757}, {"이름": "$86.99 상회", "확률%": 11.0, "전일대비%p": -40.0, "매수호가¢": 13.0, "매도호가¢": 14.0, "거래량$": 5717, "24h거래량$": 5340}], "전체선택지": [{"이름": "$85.49 상회", "확률%": 50.0, "전일대비%p": -30.0, "매수호가¢": 54.0, "매도호가¢": 55.0, "거래량$": 8228, "24h거래량$": 8223}, {"이름": "$83.49 상회", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 91.0, "매도호가¢": 92.0, "거래량$": 7531, "24h거래량$": 6851}, {"이름": "$86.49 상회", "확률%": 23.0, "전일대비%p": -26.0, "매수호가¢": 25.0, "매도호가¢": 26.0, "거래량$": 5767, "24h거래량$": 5757}, {"이름": "$86.99 상회", "확률%": 11.0, "전일대비%p": -40.0, "매수호가¢": 13.0, "매도호가¢": 14.0, "거래량$": 5717, "24h거래량$": 5340}, {"이름": "$84.49 상회", "확률%": 75.0, "전일대비%p": -14.0, "매수호가¢": 80.0, "매도호가¢": 81.0, "거래량$": 5682, "24h거래량$": 5369}, {"이름": "$84.99 상회", "확률%": 63.0, "전일대비%p": -32.0, "매수호가¢": 69.0, "매도호가¢": 70.0, "거래량$": 5622, "24h거래량$": 5450}, {"이름": "$88.49 상회", "확률%": 2.0, "전일대비%p": -48.0, "매수호가¢": 2.0, "매도호가¢": 4.0, "거래량$": 5383, "24h거래량$": 5013}, {"이름": "$85.99 상회", "확률%": 40.0, "전일대비%p": -56.0, "매수호가¢": 38.0, "매도호가¢": 40.0, "거래량$": 5080, "24h거래량$": 4840}, {"이름": "$87.99 상회", "확률%": 3.0, "전일대비%p": -44.0, "매수호가¢": 5.0, "매도호가¢": 6.0, "거래량$": 4330, "24h거래량$": 4097}, {"이름": "$83.99 상회", "확률%": 85.0, "전일대비%p": -7.0, "매수호가¢": 86.0, "매도호가¢": 87.0, "거래량$": 3254, "24h거래량$": 3085}, {"이름": "$89.49 상회", "확률%": 3.0, "전일대비%p": -35.0, "매수호가¢": 1.0, "매도호가¢": 3.0, "거래량$": 2925, "24h거래량$": 2897}, {"이름": "$87.49 상회", "확률%": 3.0, "전일대비%p": -77.0, "매수호가¢": 8.0, "매도호가¢": 9.0, "거래량$": 2860, "24h거래량$": 2489}], "kalshi_url": "https://kalshi.com/markets/kxwti", "polymarket_url": "https://polymarket.com/markets?_q=crude+oil+price", "해석": "지정학 리스크의 실시간 가격표 → 유가 급등 시 물가(CPI) 자극 → Fed 긴축 우려 → 증시 조정 사슬의 출발점", "요약": "[지정학·무역·자산] WTI 유가 단기 가격 구간 (Oil Price (WTI) on Nov 10, 2026?) · 누적 $93,560 (24h $85,065): Above $85.49 50%(-30%p), Above $83.49 90%, Above $86.49 23%(-26%p), Above $86.99 11%(-40%p)", "출처": "Kalshi 실시간"}, {"분류": "지정학·무역·자산", "시리즈": "KXTARIFFRATEPRC", "티커": "KXTARIFFRATEPRC-27JAN01", "우리말": "미국의 대중국 관세율", "제목": "What will the tariff rate on Chinese imports be on Jan 1, 2027?", "24h거래량$": 70, "누적거래량$": 9618, "선택지": [{"이름": "20% 이상", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 98.0, "거래량$": 3813, "24h거래량$": 0}, {"이름": "30% 이상", "확률%": 78.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 97.0, "거래량$": 1657, "24h거래량$": 0}, {"이름": "15% 이상", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 98.0, "거래량$": 1435, "24h거래량$": 0}, {"이름": "10% 이상", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 87.0, "매도호가¢": 99.0, "거래량$": 384, "24h거래량$": 0}], "전체선택지": [{"이름": "20% 이상", "확률%": 97.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 98.0, "거래량$": 3813, "24h거래량$": 0}, {"이름": "30% 이상", "확률%": 78.0, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 97.0, "거래량$": 1657, "24h거래량$": 0}, {"이름": "15% 이상", "확률%": 90.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 98.0, "거래량$": 1435, "24h거래량$": 0}, {"이름": "10% 이상", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 87.0, "매도호가¢": 99.0, "거래량$": 384, "24h거래량$": 0}, {"이름": "100% 이상", "확률%": 2.0, "전일대비%p": 0.0, "매수호가¢": 2.0, "매도호가¢": 17.0, "거래량$": 2, "24h거래량$": 0}, {"이름": "50% 이상", "확률%": 1.0, "전일대비%p": -21.0, "매수호가¢": 3.0, "매도호가¢": 63.0, "거래량$": 2327, "24h거래량$": 70}], "kalshi_url": "https://kalshi.com/markets/kxtariffrateprc", "polymarket_url": "https://polymarket.com/markets?_q=China+tariff", "해석": "미·중 관세율 상단 → 글로벌 공급망 비용·미국 수입물가 및 한국 중간재(반도체·화학) 수출 직결", "요약": "[지정학·무역·자산] 미국의 대중국 관세율 (What will the tariff rate on Chinese imports be on Jan 1, 2027?) · 누적 $9,618 (24h $70): 20% or above 97%, 30% or above 78%, 15% or above 90%, 10% or above 26%", "출처": "Kalshi 실시간"}, {"분류": "한국·동아시아", "시리즈": "KXCBDECISIONKOREA", "티커": "KXCBDECISIONKOREA-26NOV25", "우리말": "한국은행 금통위 기준금리 결정", "제목": "Bank of Korea rate decision in November", "24h거래량$": 207, "누적거래량$": 6980, "선택지": [{"이름": "25bp 인상", "확률%": 96.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2430, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 2752, "24h거래량$": 0}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 968, "24h거래량$": 0}, {"이름": "동결", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 628, "24h거래량$": 207}], "전체선택지": [{"이름": "25bp 인상", "확률%": 96.0, "전일대비%p": 0.0, "매수호가¢": 97.0, "매도호가¢": 99.0, "거래량$": 2430, "24h거래량$": 0}, {"이름": "50bp+ 인상", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 2752, "24h거래량$": 0}, {"이름": "50bp+ 인하", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 1.0, "거래량$": 968, "24h거래량$": 0}, {"이름": "동결", "확률%": 1.0, "전일대비%p": -2.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 628, "24h거래량$": 207}, {"이름": "Cut 1-25bps", "확률%": 1.0, "전일대비%p": 0.0, "매수호가¢": 0.0, "매도호가¢": 2.0, "거래량$": 202, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxcbdecisionkorea", "polymarket_url": "https://polymarket.com/markets?_q=Bank+of+Korea", "해석": "원/달러 환율 방어·수도권 가계부채 억제 목적의 한은 금리 경로 → 국내 증시 유동성·내수/금융주 영향", "요약": "[한국·동아시아] 한국은행 금통위 기준금리 결정 (Bank of Korea rate decision in November) · 누적 $6,980 (24h $207): Hike 1-25bps 96%, Hike more than 25bps 1%, Cut more than 25bps 1%, Maintain current rate 1%(-2%p)", "출처": "Kalshi 실시간"}, {"분류": "한국·동아시아", "시리즈": "KXSKEXPYOY", "티커": "KXSKEXPYOY-26NOV30", "우리말": "한국 수출 전년동월비", "제목": "South Korea exports YoY for November", "24h거래량$": 0, "누적거래량$": 600, "선택지": [{"이름": "80.0% 상회", "확률%": 85.0, "전일대비%p": 0.0, "매수호가¢": 76.0, "매도호가¢": 86.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "85.0% 상회", "확률%": 71.0, "전일대비%p": 0.0, "매수호가¢": 64.0, "매도호가¢": 74.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "110.0% 상회", "확률%": 11.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 12.0, "거래량$": 90, "24h거래량$": 0}, {"이름": "75.0% 상회", "확률%": 90.0, "전일대비%p": null, "매수호가¢": 85.0, "매도호가¢": 95.0, "거래량$": 0, "24h거래량$": 0}], "전체선택지": [{"이름": "80.0% 상회", "확률%": 85.0, "전일대비%p": 0.0, "매수호가¢": 76.0, "매도호가¢": 86.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "85.0% 상회", "확률%": 71.0, "전일대비%p": 0.0, "매수호가¢": 64.0, "매도호가¢": 74.0, "거래량$": 200, "24h거래량$": 0}, {"이름": "110.0% 상회", "확률%": 11.0, "전일대비%p": 0.0, "매수호가¢": 3.0, "매도호가¢": 12.0, "거래량$": 90, "24h거래량$": 0}, {"이름": "75.0% 상회", "확률%": 90.0, "전일대비%p": null, "매수호가¢": 85.0, "매도호가¢": 95.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "90.0% 상회", "확률%": 53.0, "전일대비%p": null, "매수호가¢": 48.0, "매도호가¢": 58.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "95.0% 상회", "확률%": 37.0, "전일대비%p": null, "매수호가¢": 32.0, "매도호가¢": 42.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "100.0% 상회", "확률%": 24.0, "전일대비%p": null, "매수호가¢": 19.0, "매도호가¢": 29.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "105.0% 상회", "확률%": 13.0, "전일대비%p": null, "매수호가¢": 8.0, "매도호가¢": 18.0, "거래량$": 0, "24h거래량$": 0}, {"이름": "70.0% 상회", "확률%": 98.0, "전일대비%p": 0.0, "매수호가¢": 90.0, "매도호가¢": 98.0, "거래량$": 110, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxskexpyoy", "polymarket_url": "https://polymarket.com/markets?_q=South+Korea+exports", "해석": "한국 반도체·자동차·조선 수출 모멘텀 → 코스피 대형주 영업이익과 외국인 순매수 방향 결정", "요약": "[한국·동아시아] 한국 수출 전년동월비 (South Korea exports YoY for November) · 누적 $600 (24h $0): Above 80.0% 85%, Above 85.0% 71%, Above 110.0% 11%, Above 75.0% 90%", "출처": "Kalshi 실시간"}, {"분류": "한국·동아시아", "시리즈": "KXUSAKIM", "티커": "KXUSAKIM-29", "우리말": "김정은 방미·북미 정상 만남", "제목": "Will Kim Jong-Un visit the US during Trump's term?", "24h거래량$": 0, "누적거래량$": 18751, "선택지": [{"이름": "트럼프 임기 내", "확률%": 9.9, "전일대비%p": 0.0, "매수호가¢": 8.6, "매도호가¢": 9.9, "거래량$": 18751, "24h거래량$": 0}], "전체선택지": [{"이름": "트럼프 임기 내", "확률%": 9.9, "전일대비%p": 0.0, "매수호가¢": 8.6, "매도호가¢": 9.9, "거래량$": 18751, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxusakim", "polymarket_url": "https://polymarket.com/markets?_q=Kim+Jong+Un", "해석": "한반도 지정학 긴장 완화 또는 도발 국면 가늠자(거래량 규모를 함께 확인해 과대해석 경계)", "요약": "[한국·동아시아] 김정은 방미·북미 정상 만남 (Will Kim Jong-Un visit the US during Trump's term?) · 누적 $18,751 (24h $0): During Trump's term 10%", "출처": "Kalshi 실시간"}, {"분류": "한국·동아시아", "시리즈": "KXXITAIWAN", "티커": "KXXITAIWAN", "우리말": "시진핑 대만 방문 여부", "제목": "When will Xi Jinping visit Taiwan?", "24h거래량$": 0, "누적거래량$": 58264, "선택지": [{"이름": "2030년 전", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 22.0, "거래량$": 8528, "24h거래량$": 0}, {"이름": "2029년 전", "확률%": 16.0, "전일대비%p": 0.0, "매수호가¢": 17.0, "매도호가¢": 20.0, "거래량$": 16059, "24h거래량$": 0}, {"이름": "2028년 전", "확률%": 9.6, "전일대비%p": 0.0, "매수호가¢": 6.1, "매도호가¢": 9.3, "거래량$": 12011, "24h거래량$": 0}, {"이름": "2027년 전", "확률%": 3.8, "전일대비%p": 0.0, "매수호가¢": 1.2, "매도호가¢": 3.5, "거래량$": 21666, "24h거래량$": 0}], "전체선택지": [{"이름": "2030년 전", "확률%": 26.0, "전일대비%p": 0.0, "매수호가¢": 19.0, "매도호가¢": 22.0, "거래량$": 8528, "24h거래량$": 0}, {"이름": "2029년 전", "확률%": 16.0, "전일대비%p": 0.0, "매수호가¢": 17.0, "매도호가¢": 20.0, "거래량$": 16059, "24h거래량$": 0}, {"이름": "2028년 전", "확률%": 9.6, "전일대비%p": 0.0, "매수호가¢": 6.1, "매도호가¢": 9.3, "거래량$": 12011, "24h거래량$": 0}, {"이름": "2027년 전", "확률%": 3.8, "전일대비%p": 0.0, "매수호가¢": 1.2, "매도호가¢": 3.5, "거래량$": 21666, "24h거래량$": 0}], "kalshi_url": "https://kalshi.com/markets/kxxitaiwan", "polymarket_url": "https://polymarket.com/markets?_q=China+Taiwan", "해석": "대만 해협·양안 관계 리스크 → 글로벌 파운드리(TSMC)·AI 반도체 공급망 및 한국 반도체 반사/동조 변수", "요약": "[한국·동아시아] 시진핑 대만 방문 여부 (When will Xi Jinping visit Taiwan?) · 누적 $58,264 (24h $0): Before 2030 26%, Before 2029 16%, Before 2028 10%, Before 2027 4%", "출처": "Kalshi 실시간"}], "요약줄": ["[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Dec 2026?) · 누적 $7,136,966 (24h $2,643,052): Hike 25bps 85%(+8%p), Hike >25bps 14%(+12%p), Fed maintains rate 4%(-18%p), Cut 25bps 1%(-1%p)", "[Fed·거시] 다음 FOMC 금리 결정 (Fed decision in Jan 2027?) · 누적 $381,133 (24h $10,024): Fed maintains rate 58%(-18%p), Hike 25bps 40%(+19%p), Cut 25bps 1%(-2%p), Hike >25bps 1%(-1%p)", "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Dec 2026 meeting?) · 누적 $1,010,694 (24h $120,015): Above 4.25% 13%(+11%p), Above 5.00% 2%, Above 4.50% 1%, Above 4.00% 98%(+21%p)", "[Fed·거시] FOMC 이후 기준금리 상단 (Fed funds rate after Jan 2027 meeting?) · 누적 $61,025 (24h $455): Above 3.25% 94%, Above 3.50% 97%(-1%p), Above 4.00% 97%(+7%p), Above 3.00% 95%", "[Fed·거시] 연내 Fed 금리 인하 여부 (Fed rate cut before 2027?) · 누적 $1,726,084 (24h $18,841): Cuts 2%(-0%p)", "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in November) · 누적 $201,284 (24h $33,665): Above 0.1% 20%(-6%p), Above -0.1% 62%(-8%p), Above 0.2% 7%(-7%p), Above 0.0% 44%(-19%p)", "[Fed·거시] 미국 소비자물가(CPI) 전월비 (CPI in December) · 누적 $137,214 (24h $5,820): Above 0.8% 4%, Above 0.0% 80%(-9%p), Above 0.4% 18%(-3%p), Above -0.1% 95%", "[Fed·거시] 미국 근원 CPI 전월비 (Core CPI in November) · 누적 $164,599 (24h $25,913): Above 0.4% 4%, Above 0.3% 13%(-1%p), Above 0.2% 35%(-4%p), Above 0.1% 74%(-8%p)", "[Fed·거시] 미국 공식 경기침체(NBER) (Recession this year?) · 누적 $4,157,675 (24h $8,437): Starts 1%(-1%p)", "[Fed·거시] 미국 공식 경기침체(NBER) (Recession in 2027?) · 누적 $976,109 (24h $2,044): Yes 22%(+1%p)", "[지정학·무역·자산] 호르무즈 해협 통행 정상화 시점 (When will traffic at the Strait of Hormuz return to normal?) · 누적 $15,299,867 (24h $344,080): Before Jan 1, 2027 8%(+3%p), Before Dec 1, 2026 3%, Before Jul 1, 2027 40%(+2%p), Before Apr 1, 2027 20%(+1%p)", "[지정학·무역·자산] 미·이란 핵 합의 여부 (US-Iran nuclear deal?) · 누적 $6,136,677 (24h $125,949): Before Jan 1, 2027 8%(+1%p), Before Dec 1, 2026 5%(+1%p), Before Jan 20, 2029 50%(-4%p), Before Jan 1, 2028 43%(-1%p)", "[지정학·무역·자산] WTI 유가 단기 가격 구간 (Oil Price (WTI) on Nov 10, 2026?) · 누적 $93,560 (24h $85,065): Above $85.49 50%(-30%p), Above $83.49 90%, Above $86.49 23%(-26%p), Above $86.99 11%(-40%p)", "[지정학·무역·자산] 미국의 대중국 관세율 (What will the tariff rate on Chinese imports be on Jan 1, 2027?) · 누적 $9,618 (24h $70): 20% or above 97%, 30% or above 78%, 15% or above 90%, 10% or above 26%", "[한국·동아시아] 한국은행 금통위 기준금리 결정 (Bank of Korea rate decision in November) · 누적 $6,980 (24h $207): Hike 1-25bps 96%, Hike more than 25bps 1%, Cut more than 25bps 1%, Maintain current rate 1%(-2%p)", "[한국·동아시아] 한국 수출 전년동월비 (South Korea exports YoY for November) · 누적 $600 (24h $0): Above 80.0% 85%, Above 85.0% 71%, Above 110.0% 11%, Above 75.0% 90%", "[한국·동아시아] 김정은 방미·북미 정상 만남 (Will Kim Jong-Un visit the US during Trump's term?) · 누적 $18,751 (24h $0): During Trump's term 10%", "[한국·동아시아] 시진핑 대만 방문 여부 (When will Xi Jinping visit Taiwan?) · 누적 $58,264 (24h $0): Before 2030 26%, Before 2029 16%, Before 2028 10%, Before 2027 4%"]};
 const POLY_SNAPSHOTS = [
   {
+    "출처": "Polymarket",
+    "분류": "지정학·무역·자산",
+    "시리즈": "POLY-IRAN-CEASEFIRE",
+    "티커": "POLYMARKET-IRAN",
+    "우리말": "미국 · 이란 휴전 및 군사 충돌 향방",
+    "제목": "US-Iran Ceasefire & Military Escalation Markets",
+    "24h거래량$": 412000,
+    "누적거래량$": 42032801,
+    "선택지": [
+      {"이름": "단기 휴전 합의 불발 (No)", "확률%": 93.0, "전일대비%p": 1.0, "거래량$": 42032801},
+      {"이름": "연내 핵·휴전 타결 (Yes)", "확률%": 7.0, "전일대비%p": -1.0, "거래량$": 6022402},
+      {"이름": "2029년 전 중기 합의", "확률%": 50.0, "전일대비%p": 3.0, "거래량$": 2410000}
+    ],
+    "전체선택지": [],
+    "kalshi_url": "https://kalshi.com/markets/kxusairanagreement",
+    "해석": "누적 $4,203만이 몰린 중동 최대 베팅 시장 — 단기 휴전·합의 가능성을 7%로 낮게 보며 호르무즈 원유 공급 위험 프리미엄을 지지"
+  },
+  {
+    "출처": "Polymarket",
+    "분류": "지정학·무역·자산",
+    "시리즈": "POLY-RU-UA",
+    "티커": "POLYMARKET-RU-UA",
+    "우리말": "러시아 · 우크라이나 휴전 합의 시점",
+    "제목": "Russia x Ukraine Ceasefire in 2026?",
+    "24h거래량$": 208287,
+    "누적거래량$": 10616811,
+    "선택지": [
+      {"이름": "2026년 11월 30일 전 휴전", "확률%": 5.0, "전일대비%p": 0.0, "거래량$": 208287},
+      {"이름": "2026년 12월 31일(연내) 휴전", "확률%": 15.0, "전일대비%p": 0.0, "거래량$": 10616811},
+      {"이름": "연내 휴전 불발 (No)", "확률%": 85.0, "전일대비%p": 0.0, "거래량$": 10616811}
+    ],
+    "전체선택지": [],
+    "kalshi_url": "https://kalshi.com/markets",
+    "해석": "누적 $1,062만 거래 — 연내 조기 휴전 확률은 15%에 머물러 에너지·곡물 지정학 리스크 해소가 지연되는 흐름"
+  },
+  {
+    "출처": "Polymarket",
+    "분류": "Fed·거시",
+    "시리즈": "POLY-FED-HIKE",
+    "티커": "POLYMARKET-FED-2026",
+    "우리말": "미 연준(Fed) 2026년 추가 금리 인상 전망",
+    "제목": "Fed Rate Hike in 2026 & Dec FOMC Cross-Check",
+    "24h거래량$": 104000,
+    "누적거래량$": 2000000,
+    "선택지": [
+      {"이름": "2026년 추가 금리 인상 (Polymarket)", "확률%": 82.0, "전일대비%p": 2.0, "거래량$": 2000000},
+      {"이름": "12월 FOMC 25bp 인상 (Kalshi 교차)", "확률%": 78.0, "전일대비%p": 1.0, "거래량$": 4573102},
+      {"이름": "12월 FOMC 동결 (Kalshi 교차)", "확률%": 22.0, "전일대비%p": -1.0, "거래량$": 1296072}
+    ],
+    "전체선택지": [],
+    "kalshi_url": "https://kalshi.com/markets/kxfeddecision",
+    "해석": "Polymarket(82%)과 Kalshi(78%) 양쪽 모두 연말 금리 인상 쪽으로 강하게 쏠림 → 미 10년물 금리·달러 강세 및 기술주 할인율 부담"
+  },
+  {
+    "출처": "Polymarket",
+    "분류": "Fed·거시",
+    "시리즈": "POLY-US-CPI",
+    "티커": "POLYMARKET-CPI-OCT",
+    "우리말": "미국 10월 소비자물가(CPI) 상승률 구간",
+    "제목": "US October CPI YoY & MoM Inflation Brackets",
+    "24h거래량$": 47600,
+    "누적거래량$": 138600,
+    "선택지": [
+      {"이름": "연간 CPI 3.7% 구간 (Polymarket)", "확률%": 95.0, "전일대비%p": 0.0, "거래량$": 91000},
+      {"이름": "월간 CPI 0.2% 구간 (Polymarket)", "확률%": 43.0, "전일대비%p": 0.0, "거래량$": 47600},
+      {"이름": "월간 CPI 0.2% 상회 (Kalshi 교차)", "확률%": 54.0, "전일대비%p": -8.0, "거래량$": 1331912}
+    ],
+    "전체선택지": [],
+    "kalshi_url": "https://kalshi.com/markets/kxcpi",
+    "해석": "유가 반등이 헤드라인 CPI에 전이되는지 확인하는 핵심 지표 — 물가 상방 시 금리 인하 기대가 추가로 후퇴"
+  },
+  {
+    "출처": "Polymarket",
     "분류": "한국·동아시아",
     "시리즈": "POLY-NK2027",
     "티커": "POLYMARKET-NK-2027",
-    "우리말": "북한의 2027년 전 한국 침공 여부 (Polymarket 스냅샷)",
+    "우리말": "북한의 2027년 전 한국 침공 여부",
     "제목": "Will North Korea invade South Korea before 2027?",
     "24h거래량$": 5,
     "누적거래량$": 355502,
     "선택지": [
-      {"이름": "Yes (침공)", "확률%": 1.5, "전일대비%p": 0.0, "매수호가¢": 1.0, "매도호가¢": 2.0, "거래량$": 355502, "24h거래량$": 5},
-      {"이름": "No (비침공)", "확률%": 98.5, "전일대비%p": 0.0, "매수호가¢": 98.0, "매도호가¢": 99.0, "거래량$": 355502, "24h거래량$": 5}
+      {"이름": "침공 없음 (No · 98~99¢)", "확률%": 98.5, "전일대비%p": 0.0, "거래량$": 355502},
+      {"이름": "침공 발생 (Yes · 1~2¢)", "확률%": 1.5, "전일대비%p": 0.0, "거래량$": 355502}
     ],
     "전체선택지": [],
     "kalshi_url": "https://kalshi.com/markets/kxusakim",
-    "polymarket_url": "https://polymarket.com/event/will-north-korea-invade-south-korea-before-2027",
     "해석": "24시간 거래량이 $5에 불과한 얕은 유동성 시장 — 소수 포지션 호가이므로 실제 전면전 확률로 단정하지 않고 실제 군사·외교 뉴스와 대조 필수"
   }
 ];
 
-const ALL_ITEMS = [...(PM["시장"] || []), ...POLY_SNAPSHOTS];
+const ALL_ITEMS = [...POLY_SNAPSHOTS, ...(PM["시장"] || [])];
 let currentCat = "ALL";
 let expandedSet = new Set();
 
-function fmtUsd(n) {
-  return "$" + Number(n || 0).toLocaleString("en-US");
+function fmtKorUsd(n) {
+  const v = Number(n || 0);
+  if (v >= 100000000) return "$" + (v / 100000000).toFixed(1) + "억";
+  if (v >= 10000) return "$" + Math.round(v / 10000).toLocaleString("en-US") + "만";
+  return "$" + Math.round(v).toLocaleString("en-US");
 }
 
-function catClass(cat, ticker) {
-  if (String(ticker).startsWith("POLY")) return "cat-poly";
+function catClass(cat, src) {
+  if (src === "Polymarket") return "cat-poly";
   if (cat === "Fed·거시") return "cat-fed";
   if (cat === "지정학·무역·자산") return "cat-geo";
   return "cat-kr";
 }
 
-function barColor(prob, idx) {
+function barColor(prob, idx, isPoly) {
+  if (isPoly && idx === 0) return "#a855f7";
   if (prob >= 70) return "#16c784";
   if (prob >= 35) return "#2f81f7";
   if (idx === 0) return "#f59e0b";
@@ -451,12 +703,28 @@ function maxAbsChg(item) {
 }
 
 function render() {
+  const grid = document.getElementById("grid");
+  const sec6 = document.getElementById("sec6");
+  const filterBar = document.getElementById("filter-bar");
+
+  if (currentCat === "SEC6") {
+    grid.style.display = "none";
+    filterBar.style.display = "none";
+    sec6.classList.add("show");
+    return;
+  }
+  grid.style.display = "grid";
+  filterBar.style.display = "grid";
+  sec6.classList.remove("show");
+
   const q = document.getElementById("search").value.trim().toLowerCase();
   const sortBy = document.getElementById("sort").value;
   let list = ALL_ITEMS.slice();
 
-  if (currentCat === "TOP7") {
-    list.sort((a, b) => (b["24h거래량$"] || 0) - (a["24h거래량$"] || 0));
+  if (currentCat === "POLY") {
+    list = list.filter(it => it["출처"] === "Polymarket");
+  } else if (currentCat === "TOP7") {
+    list.sort((a, b) => (b["누적거래량$"] || 0) - (a["누적거래량$"] || 0));
     list = list.slice(0, 7);
   } else if (currentCat !== "ALL") {
     list = list.filter(it => it["분류"] === currentCat);
@@ -479,9 +747,9 @@ function render() {
     list.sort((a, b) => maxAbsChg(b) - maxAbsChg(a));
   }
 
-  const grid = document.getElementById("grid");
   grid.innerHTML = list.map((it, idx) => {
     const tk = it["티커"] || ("idx-" + idx);
+    const isPoly = it["출처"] === "Polymarket";
     const isExp = expandedSet.has(tk);
     const fullOpts = (it["전체선택지"] && it["전체선택지"].length) ? it["전체선택지"] : (it["선택지"] || []);
     const showOpts = isExp ? fullOpts : (it["선택지"] || []);
@@ -490,19 +758,19 @@ function render() {
     const optsHtml = showOpts.map((o, oi) => {
       const p = Number(o["확률%"] || 0);
       const chg = o["전일대비%p"];
-      const chgHtml = (chg !== null && chg !== undefined && chg !== 0)
+      const chgHtml = (chg !== null && chg !== undefined && Math.abs(chg) >= 0.5)
         ? `<span class="chg ${chg > 0 ? 'up' : 'dn'}">${chg > 0 ? '+' : ''}${chg.toFixed(0)}%p</span>`
         : "";
-      const bid = o["매수호가¢"] !== undefined ? o["매수호가¢"] : p;
-      const ask = o["매도호가¢"] !== undefined ? o["매도호가¢"] : p;
-      const yesNo = (bid || ask) ? `<span class="yesno-pill">Yes ${Math.round(ask || p)}¢ · Vol ${fmtUsd(o["거래량$"])}</span>` : "";
+      const volStr = o["거래량$"] ? `<span class="opt-vol">${fmtKorUsd(o["거래량$"])}</span>` : "";
       return `
         <div class="opt-row">
-          <div class="opt-bar" style="width:${Math.min(100, Math.max(2, p))}%; background:${barColor(p, oi)};"></div>
+          <div class="opt-bar" style="width:${Math.min(100, Math.max(2, p))}%; background:${barColor(p, oi, isPoly)};"></div>
           <div class="opt-content">
-            <span class="opt-name">${o["이름"]}</span>
+            <div class="opt-left">
+              <span class="opt-name">${o["이름"]}</span>
+              ${volStr}
+            </div>
             <div class="opt-right">
-              ${yesNo}
               ${chgHtml}
               <span class="opt-prob">${p.toFixed(p < 10 && p % 1 !== 0 ? 1 : 0)}%</span>
             </div>
@@ -518,23 +786,20 @@ function render() {
     ` : "";
 
     return `
-      <article class="card">
+      <article class="card ${isPoly ? 'poly-card' : ''}">
         <div>
           <div class="card-head">
-            <span class="cat-pill ${catClass(it["분류"], tk)}">${it["분류"]}</span>
-            <span class="vol-meta">24h <strong>${fmtUsd(it["24h거래량$"])}</strong> · 누적 <strong>${fmtUsd(it["누적거래량$"])}</strong></span>
+            <div class="pill-group">
+              <span class="src-pill ${isPoly ? 'poly' : ''}">${isPoly ? '🟣 Polymarket' : '🔵 Kalshi 실시간'}</span>
+              <span class="cat-pill ${catClass(it["분류"], it["출처"])}">${it["분류"]}</span>
+            </div>
+            <span class="vol-meta">24h <strong>${fmtKorUsd(it["24h거래량$"])}</strong> · 누적 <strong>${fmtKorUsd(it["누적거래량$"])}</strong></span>
           </div>
           <h2 class="card-title-kr">${it["우리말"]}</h2>
-          <div class="card-title-en">${tk} · ${it["제목"]}</div>
+          <div class="card-title-en">${it["제목"]}</div>
           <div class="opt-list">${optsHtml}</div>
           ${moreBtn}
           ${it["해석"] ? `<div class="note-box"><strong>시장 연결:</strong> ${it["해석"]}</div>` : ""}
-        </div>
-        <div class="card-foot">
-          <div class="link-group">
-            <a class="ext-link" href="${it["kalshi_url"]}" target="_blank" rel="noopener">Kalshi 계약 원문 열기 ↗</a>
-            <a class="ext-link poly" href="${it["polymarket_url"]}" target="_blank" rel="noopener">Polymarket 상응 시장 열기 ↗</a>
-          </div>
         </div>
       </article>
     `;
